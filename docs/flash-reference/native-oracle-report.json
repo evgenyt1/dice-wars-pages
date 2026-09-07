@@ -1,0 +1,1461 @@
+{
+  "schemaVersion": 1,
+  "evidenceKind": "AS2 numeric-class translation with injected LCG; not a Flash Player recording",
+  "limitation": "Simulation harness omits animation RNG calls and continues after human elimination to exercise completion. These are not original campaign traces.",
+  "sourceHashes": {
+    "scripts/__Packages/dw/AreaData.as": "b4e44d67902982daff45951ed474999f6b1fcf355a3063a43986310dec7a2a4e",
+    "scripts/__Packages/dw/PlayerData.as": "917a1bcb6671f61431583872dae4dd3cf809ad1bca80a2d08215d4651ca93710",
+    "scripts/__Packages/dw/HistoryData.as": "613f3a3dbfca1f104aba8c3ac0634b9f96e9079cf0a41378e7263e105050649b",
+    "scripts/__Packages/dw/JoinData.as": "998704588eb81c747bd5cd088eb1875cb86b89b5ef6d561877a10ab39a72bfa8",
+    "scripts/__Packages/dw/Game.as": "861ecab8bbe9e755f1c5f5150ff7ed4aba35b6bbb509162bc3178ca0153a644c"
+  },
+  "comparedEngineSha256": "a0c213bc18a8dea8bfefabb1631d17c15827799be7b6045d7d4190ae430d6fe1",
+  "rng": {
+    "algorithm": "LCG uint32",
+    "multiplier": 1664525,
+    "increment": 1013904223,
+    "divisor": 4294967296
+  },
+  "mapCases": 70,
+  "differences": {
+    "cells": 0,
+    "owners": 0,
+    "dice": 0,
+    "centers": 0,
+    "adjacency": 0,
+    "turnOrder": 0,
+    "rngCalls": 0
+  },
+  "cases": [
+    {
+      "playerCount": 2,
+      "seed": 1,
+      "originalLiveTerritories": 31,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 2,
+      "seed": 2,
+      "originalLiveTerritories": 31,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 2,
+      "seed": 3,
+      "originalLiveTerritories": 31,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 2,
+      "seed": 4,
+      "originalLiveTerritories": 30,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 2,
+      "seed": 5,
+      "originalLiveTerritories": 31,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 2,
+      "seed": 6,
+      "originalLiveTerritories": 29,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 2,
+      "seed": 7,
+      "originalLiveTerritories": 31,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 2,
+      "seed": 8,
+      "originalLiveTerritories": 31,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 2,
+      "seed": 9,
+      "originalLiveTerritories": 30,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 2,
+      "seed": 10,
+      "originalLiveTerritories": 30,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 3,
+      "seed": 1,
+      "originalLiveTerritories": 31,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 3,
+      "seed": 2,
+      "originalLiveTerritories": 31,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 3,
+      "seed": 3,
+      "originalLiveTerritories": 31,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 3,
+      "seed": 4,
+      "originalLiveTerritories": 30,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 3,
+      "seed": 5,
+      "originalLiveTerritories": 31,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 3,
+      "seed": 6,
+      "originalLiveTerritories": 29,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 3,
+      "seed": 7,
+      "originalLiveTerritories": 31,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 3,
+      "seed": 8,
+      "originalLiveTerritories": 31,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 3,
+      "seed": 9,
+      "originalLiveTerritories": 30,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 3,
+      "seed": 10,
+      "originalLiveTerritories": 30,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 4,
+      "seed": 1,
+      "originalLiveTerritories": 31,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 4,
+      "seed": 2,
+      "originalLiveTerritories": 31,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 4,
+      "seed": 3,
+      "originalLiveTerritories": 31,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 4,
+      "seed": 4,
+      "originalLiveTerritories": 30,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 4,
+      "seed": 5,
+      "originalLiveTerritories": 31,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 4,
+      "seed": 6,
+      "originalLiveTerritories": 29,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 4,
+      "seed": 7,
+      "originalLiveTerritories": 31,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 4,
+      "seed": 8,
+      "originalLiveTerritories": 31,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 4,
+      "seed": 9,
+      "originalLiveTerritories": 30,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 4,
+      "seed": 10,
+      "originalLiveTerritories": 30,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 5,
+      "seed": 1,
+      "originalLiveTerritories": 31,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 5,
+      "seed": 2,
+      "originalLiveTerritories": 31,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 5,
+      "seed": 3,
+      "originalLiveTerritories": 31,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 5,
+      "seed": 4,
+      "originalLiveTerritories": 30,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 5,
+      "seed": 5,
+      "originalLiveTerritories": 31,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 5,
+      "seed": 6,
+      "originalLiveTerritories": 29,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 5,
+      "seed": 7,
+      "originalLiveTerritories": 31,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 5,
+      "seed": 8,
+      "originalLiveTerritories": 31,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 5,
+      "seed": 9,
+      "originalLiveTerritories": 30,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 5,
+      "seed": 10,
+      "originalLiveTerritories": 30,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 6,
+      "seed": 1,
+      "originalLiveTerritories": 31,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 6,
+      "seed": 2,
+      "originalLiveTerritories": 31,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 6,
+      "seed": 3,
+      "originalLiveTerritories": 31,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 6,
+      "seed": 4,
+      "originalLiveTerritories": 30,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 6,
+      "seed": 5,
+      "originalLiveTerritories": 31,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 6,
+      "seed": 6,
+      "originalLiveTerritories": 29,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 6,
+      "seed": 7,
+      "originalLiveTerritories": 31,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 6,
+      "seed": 8,
+      "originalLiveTerritories": 31,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 6,
+      "seed": 9,
+      "originalLiveTerritories": 30,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 6,
+      "seed": 10,
+      "originalLiveTerritories": 30,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 7,
+      "seed": 1,
+      "originalLiveTerritories": 31,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 7,
+      "seed": 2,
+      "originalLiveTerritories": 31,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 7,
+      "seed": 3,
+      "originalLiveTerritories": 31,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 7,
+      "seed": 4,
+      "originalLiveTerritories": 30,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 7,
+      "seed": 5,
+      "originalLiveTerritories": 31,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 7,
+      "seed": 6,
+      "originalLiveTerritories": 29,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 7,
+      "seed": 7,
+      "originalLiveTerritories": 31,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 7,
+      "seed": 8,
+      "originalLiveTerritories": 31,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 7,
+      "seed": 9,
+      "originalLiveTerritories": 30,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 7,
+      "seed": 10,
+      "originalLiveTerritories": 30,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 8,
+      "seed": 1,
+      "originalLiveTerritories": 31,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 8,
+      "seed": 2,
+      "originalLiveTerritories": 31,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 8,
+      "seed": 3,
+      "originalLiveTerritories": 31,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 8,
+      "seed": 4,
+      "originalLiveTerritories": 30,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 8,
+      "seed": 5,
+      "originalLiveTerritories": 31,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 8,
+      "seed": 6,
+      "originalLiveTerritories": 29,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 8,
+      "seed": 7,
+      "originalLiveTerritories": 31,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 8,
+      "seed": 8,
+      "originalLiveTerritories": 31,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 8,
+      "seed": 9,
+      "originalLiveTerritories": 30,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    },
+    {
+      "playerCount": 8,
+      "seed": 10,
+      "originalLiveTerritories": 30,
+      "differences": {
+        "cells": false,
+        "owners": false,
+        "dice": false,
+        "centers": false,
+        "adjacency": false,
+        "turnOrder": false,
+        "rngCalls": false
+      }
+    }
+  ],
+  "aiProbes": [
+    {
+      "name": "Rank bypass still consumes equal-dice RNG; uniform choice can pick lower advantage",
+      "areas": [
+        {
+          "id": 1,
+          "owner": 0,
+          "dice": 2,
+          "neighbors": [
+            2,
+            3
+          ]
+        },
+        {
+          "id": 2,
+          "owner": 1,
+          "dice": 2
+        },
+        {
+          "id": 3,
+          "owner": 2,
+          "dice": 1
+        }
+      ],
+      "currentPlayer": 0,
+      "randomValues": [
+        0,
+        0
+      ],
+      "move": [
+        1,
+        2
+      ],
+      "calls": 2,
+      "rank": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "name": "Uniform choice can pick the last candidate",
+      "areas": [
+        {
+          "id": 1,
+          "owner": 0,
+          "dice": 2,
+          "neighbors": [
+            2,
+            3
+          ]
+        },
+        {
+          "id": 2,
+          "owner": 1,
+          "dice": 2
+        },
+        {
+          "id": 3,
+          "owner": 2,
+          "dice": 1
+        }
+      ],
+      "currentPlayer": 0,
+      "randomValues": [
+        0,
+        0.999999
+      ],
+      "move": [
+        1,
+        3
+      ],
+      "calls": 2,
+      "rank": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "name": "Non-bypass equal gate rejects exactly 0.1",
+      "areas": [
+        {
+          "id": 1,
+          "owner": 1,
+          "dice": 2,
+          "neighbors": [
+            2
+          ]
+        },
+        {
+          "id": 2,
+          "owner": 2,
+          "dice": 2
+        },
+        {
+          "id": 3,
+          "owner": 0,
+          "dice": 2
+        }
+      ],
+      "currentPlayer": 1,
+      "randomValues": [
+        0.1
+      ],
+      "move": null,
+      "calls": 1,
+      "rank": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "name": "Non-bypass equal gate accepts above 0.1",
+      "areas": [
+        {
+          "id": 1,
+          "owner": 1,
+          "dice": 2,
+          "neighbors": [
+            2
+          ]
+        },
+        {
+          "id": 2,
+          "owner": 2,
+          "dice": 2
+        },
+        {
+          "id": 3,
+          "owner": 0,
+          "dice": 2
+        }
+      ],
+      "currentPlayer": 1,
+      "randomValues": [
+        0.100001,
+        0
+      ],
+      "move": [
+        1,
+        2
+      ],
+      "calls": 2,
+      "rank": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "name": "Dominant-player focus excludes the easier other enemy",
+      "areas": [
+        {
+          "id": 1,
+          "owner": 0,
+          "dice": 4,
+          "neighbors": [
+            2,
+            3
+          ]
+        },
+        {
+          "id": 2,
+          "owner": 1,
+          "dice": 2
+        },
+        {
+          "id": 3,
+          "owner": 2,
+          "dice": 1
+        },
+        {
+          "id": 4,
+          "owner": 1,
+          "dice": 4
+        }
+      ],
+      "currentPlayer": 0,
+      "randomValues": [
+        0
+      ],
+      "move": [
+        1,
+        2
+      ],
+      "calls": 1,
+      "rank": [
+        1,
+        0,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "name": "dice_jun is not a conventional rank",
+      "areas": [
+        {
+          "id": 1,
+          "owner": 0,
+          "dice": 2
+        },
+        {
+          "id": 2,
+          "owner": 1,
+          "dice": 1
+        },
+        {
+          "id": 3,
+          "owner": 2,
+          "dice": 4
+        },
+        {
+          "id": 4,
+          "owner": 3,
+          "dice": 3
+        }
+      ],
+      "currentPlayer": 0,
+      "randomValues": [],
+      "move": null,
+      "calls": 0,
+      "rank": [
+        3,
+        2,
+        1,
+        0,
+        4,
+        5,
+        6,
+        7
+      ]
+    }
+  ],
+  "simulations": [
+    {
+      "playerCount": 2,
+      "seed": 1,
+      "turns": 18,
+      "battles": 141,
+      "supplied": 319,
+      "winner": 1,
+      "humanEliminatedAt": 141
+    },
+    {
+      "playerCount": 2,
+      "seed": 2,
+      "turns": 8,
+      "battles": 66,
+      "supplied": 142,
+      "winner": 1,
+      "humanEliminatedAt": 66
+    },
+    {
+      "playerCount": 2,
+      "seed": 3,
+      "turns": 14,
+      "battles": 72,
+      "supplied": 219,
+      "winner": 1,
+      "humanEliminatedAt": 72
+    },
+    {
+      "playerCount": 3,
+      "seed": 1,
+      "turns": 37,
+      "battles": 202,
+      "supplied": 460,
+      "winner": 1,
+      "humanEliminatedAt": 202
+    },
+    {
+      "playerCount": 3,
+      "seed": 2,
+      "turns": 18,
+      "battles": 93,
+      "supplied": 201,
+      "winner": 0,
+      "humanEliminatedAt": null
+    },
+    {
+      "playerCount": 3,
+      "seed": 3,
+      "turns": 34,
+      "battles": 99,
+      "supplied": 355,
+      "winner": 2,
+      "humanEliminatedAt": 84
+    },
+    {
+      "playerCount": 4,
+      "seed": 1,
+      "turns": 32,
+      "battles": 170,
+      "supplied": 284,
+      "winner": 1,
+      "humanEliminatedAt": 170
+    },
+    {
+      "playerCount": 4,
+      "seed": 2,
+      "turns": 96,
+      "battles": 464,
+      "supplied": 1150,
+      "winner": 2,
+      "humanEliminatedAt": 191
+    },
+    {
+      "playerCount": 4,
+      "seed": 3,
+      "turns": 58,
+      "battles": 287,
+      "supplied": 608,
+      "winner": 0,
+      "humanEliminatedAt": null
+    },
+    {
+      "playerCount": 5,
+      "seed": 1,
+      "turns": 59,
+      "battles": 291,
+      "supplied": 587,
+      "winner": 1,
+      "humanEliminatedAt": 184
+    },
+    {
+      "playerCount": 5,
+      "seed": 2,
+      "turns": 74,
+      "battles": 343,
+      "supplied": 709,
+      "winner": 0,
+      "humanEliminatedAt": null
+    },
+    {
+      "playerCount": 5,
+      "seed": 3,
+      "turns": 116,
+      "battles": 581,
+      "supplied": 1257,
+      "winner": 1,
+      "humanEliminatedAt": 581
+    },
+    {
+      "playerCount": 6,
+      "seed": 1,
+      "turns": 47,
+      "battles": 263,
+      "supplied": 482,
+      "winner": 4,
+      "humanEliminatedAt": 83
+    },
+    {
+      "playerCount": 6,
+      "seed": 2,
+      "turns": 176,
+      "battles": 842,
+      "supplied": 1889,
+      "winner": 0,
+      "humanEliminatedAt": null
+    },
+    {
+      "playerCount": 6,
+      "seed": 3,
+      "turns": 86,
+      "battles": 317,
+      "supplied": 704,
+      "winner": 4,
+      "humanEliminatedAt": 217
+    },
+    {
+      "playerCount": 7,
+      "seed": 1,
+      "turns": 78,
+      "battles": 374,
+      "supplied": 646,
+      "winner": 6,
+      "humanEliminatedAt": 81
+    },
+    {
+      "playerCount": 7,
+      "seed": 2,
+      "turns": 70,
+      "battles": 251,
+      "supplied": 597,
+      "winner": 0,
+      "humanEliminatedAt": null
+    },
+    {
+      "playerCount": 7,
+      "seed": 3,
+      "turns": 118,
+      "battles": 386,
+      "supplied": 918,
+      "winner": 3,
+      "humanEliminatedAt": 382
+    },
+    {
+      "playerCount": 8,
+      "seed": 1,
+      "turns": 88,
+      "battles": 370,
+      "supplied": 699,
+      "winner": 3,
+      "humanEliminatedAt": 61
+    },
+    {
+      "playerCount": 8,
+      "seed": 2,
+      "turns": 208,
+      "battles": 624,
+      "supplied": 1469,
+      "winner": 7,
+      "humanEliminatedAt": 580
+    },
+    {
+      "playerCount": 8,
+      "seed": 3,
+      "turns": 203,
+      "battles": 813,
+      "supplied": 1908,
+      "winner": 2,
+      "humanEliminatedAt": 121
+    }
+  ]
+}

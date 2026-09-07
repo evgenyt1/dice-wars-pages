@@ -1,0 +1,21 @@
+@import "tailwindcss";
+:root { font-family: Arial, sans-serif; color: #222244; background: #fff; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+button, a { touch-action: manipulation; }
+.game-shell { min-height: 100svh; display: flex; flex-direction: column; align-items: center; justify-content: center; background: white; }
+.classic-stage { display: block; width: min(100vw, calc((100svh - 44px) * 4 / 3)); height: auto; aspect-ratio: 4 / 3; flex: none; background: #fff; overflow: hidden; user-select: none; touch-action: manipulation; }
+.flash-button { cursor: pointer; outline: none; }
+.button-over, .button-down { display: none; }
+.flash-button:hover .button-up, .flash-button:focus-visible .button-up { display: none; }
+.flash-button:hover .button-over, .flash-button:focus-visible .button-over { display: inline; }
+.flash-button:active .button-up, .flash-button:active .button-over, .flash-button.key-down .button-up, .flash-button.key-down .button-over { display: none; }
+.flash-button:active .button-down, .flash-button.key-down .button-down { display: inline; }
+.flash-button:focus-visible .button-hit { opacity: .15; }
+.territory-control { cursor: pointer; outline: none; }
+.territory-control:focus-visible { filter: drop-shadow(0 0 2px #000); }
+.modern-controls { min-height: 44px; display: flex; align-items: center; justify-content: center; gap: 20px; font-size: 14px; }
+.modern-controls button { background: white; border: 1px solid #ddd; color: #555; border-radius: 3px; padding: 5px 12px; cursor: pointer; }
+.modern-controls button:focus-visible { outline: 2px solid #222244; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+@media (prefers-reduced-motion: reduce) { .classic-stage * { scroll-behavior: auto; } }

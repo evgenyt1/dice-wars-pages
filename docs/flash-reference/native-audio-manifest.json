@@ -1,0 +1,149 @@
+{
+  "sourceSha256": "0690936010c150a0f2592e838dbbb9deebaef24e448c89f8c60f2f6667dbb7d1",
+  "decoder": "FFDec 26.2.1 WAV export, SeekSamples already applied; cropped once to SoundSampleCount",
+  "runtimeComparison": "Pending Adobe Flash recording; do not claim decoder/onset equivalence.",
+  "sounds": [
+    {
+      "id": 1,
+      "linkage": "success.wav",
+      "sampleRate": 11025,
+      "channels": 1,
+      "bitrateKbps": 16,
+      "seekSamples": 1661,
+      "soundSampleCount": 2470,
+      "declaredDurationSeconds": 0.22403628117913832,
+      "mp3Bytes": 936,
+      "mp3Sha256": "2746ea4dd6f10078fe20647f8cdc7cceb75e766aba0b8c4ba2ca7db1c1243a3d",
+      "matchingPortFiles": [
+        "public/game-assets/audio/success.mp3"
+      ],
+      "name": "success",
+      "ffdecWavSamplesAfterSeek": 3523,
+      "wavSha256": "80cfff132b8bdb09a47e325b5e26ced100e5bff1d23f152c5bdfdd89f5e98d8d"
+    },
+    {
+      "id": 2,
+      "linkage": "myturn.wav",
+      "sampleRate": 11025,
+      "channels": 1,
+      "bitrateKbps": 16,
+      "seekSamples": 1661,
+      "soundSampleCount": 1883,
+      "declaredDurationSeconds": 0.1707936507936508,
+      "mp3Bytes": 832,
+      "mp3Sha256": "0e8bec7be695582bb0caa9acae35dc1e5196172acfc8b244ee6ffa6202e02129",
+      "matchingPortFiles": [
+        "public/game-assets/audio/my-turn.mp3"
+      ],
+      "name": "my-turn",
+      "ffdecWavSamplesAfterSeek": 2947,
+      "wavSha256": "4e01200057493534052d84fc964bba22f0a3b932faf95a761fcf041536163201"
+    },
+    {
+      "id": 3,
+      "linkage": "fail.wav",
+      "sampleRate": 11025,
+      "channels": 1,
+      "bitrateKbps": 16,
+      "seekSamples": 1661,
+      "soundSampleCount": 4234,
+      "declaredDurationSeconds": 0.3840362811791383,
+      "mp3Bytes": 1248,
+      "mp3Sha256": "a386fe7994bdfc56b47ffedefd70945f22112464eceb724bba6ff22fc82a349b",
+      "matchingPortFiles": [
+        "public/game-assets/audio/fail.mp3"
+      ],
+      "name": "fail",
+      "ffdecWavSamplesAfterSeek": 5251,
+      "wavSha256": "95ab0ce56a980a7840f24c512053fbd6665603576c137be5f8e5967ea942c5ee"
+    },
+    {
+      "id": 4,
+      "linkage": "dice.wav",
+      "sampleRate": 11025,
+      "channels": 1,
+      "bitrateKbps": 16,
+      "seekSamples": 1661,
+      "soundSampleCount": 158,
+      "declaredDurationSeconds": 0.014331065759637189,
+      "mp3Bytes": 520,
+      "mp3Sha256": "5f52d2f2ca57de531822a2bbe3649d404914efafcc82fb5ecc4b05b0f783cd86",
+      "matchingPortFiles": [
+        "public/game-assets/audio/dice.mp3"
+      ],
+      "name": "dice",
+      "ffdecWavSamplesAfterSeek": 1219,
+      "wavSha256": "96c4e473d5e2ad8670271645ed4d865c23c4b171bfaa63788b648550a34a894b"
+    },
+    {
+      "id": 5,
+      "linkage": "click.wav",
+      "sampleRate": 11025,
+      "channels": 1,
+      "bitrateKbps": 16,
+      "seekSamples": 1661,
+      "soundSampleCount": 678,
+      "declaredDurationSeconds": 0.06149659863945578,
+      "mp3Bytes": 624,
+      "mp3Sha256": "b78769218d2f366713fcdaef6762f69fc8b44f892a9ca948885b1e28d1d4fb76",
+      "matchingPortFiles": [
+        "public/game-assets/audio/click.mp3"
+      ],
+      "name": "click",
+      "ffdecWavSamplesAfterSeek": 1795,
+      "wavSha256": "1371ad0236b7a2ca94e3192f035ab5314d82224444d1ec4f84dedd6c81778878"
+    },
+    {
+      "id": 15,
+      "linkage": null,
+      "sampleRate": 11025,
+      "channels": 1,
+      "bitrateKbps": 16,
+      "seekSamples": 1661,
+      "soundSampleCount": 1817,
+      "declaredDurationSeconds": 0.16480725623582768,
+      "mp3Bytes": 832,
+      "mp3Sha256": "b4dddbb59c122b6ec7ae12ec41cd33b78bc7159376be9d944857152c425ab6a7",
+      "matchingPortFiles": [],
+      "name": "button",
+      "ffdecWavSamplesAfterSeek": 2947,
+      "wavSha256": "4237c1d1c56adb81824e36f2bd76944d356a9c26fa47a1b11eff4907c1f2820b"
+    },
+    {
+      "id": 151,
+      "linkage": null,
+      "sampleRate": 11025,
+      "channels": 1,
+      "bitrateKbps": 16,
+      "seekSamples": 1661,
+      "soundSampleCount": 12425,
+      "declaredDurationSeconds": 1.126984126984127,
+      "mp3Bytes": 2704,
+      "mp3Sha256": "3c5bd6588eaf212460876472e89b81ad3f3a85a7a3ae74beeb483ebdf3117d08",
+      "matchingPortFiles": [
+        "public/game-assets/audio/game-over.mp3"
+      ],
+      "name": "game-over",
+      "ffdecWavSamplesAfterSeek": 13315,
+      "wavSha256": "a57c746657d3f63575b365c4eb49d545f74c094d849a057f65173da07a2bafce"
+    },
+    {
+      "id": 160,
+      "linkage": null,
+      "sampleRate": 11025,
+      "channels": 1,
+      "bitrateKbps": 16,
+      "seekSamples": 1661,
+      "soundSampleCount": 33075,
+      "declaredDurationSeconds": 3.0,
+      "mp3Bytes": 6448,
+      "mp3Sha256": "2b262e11abdffc13e633e25f92551eaf399a9fd039c5918212c3dfd017e3d3b6",
+      "matchingPortFiles": [
+        "public/game-assets/audio/victory.mp3"
+      ],
+      "name": "victory",
+      "ffdecWavSamplesAfterSeek": 34051,
+      "wavSha256": "8f8b443c847ff1007c8e81973ec983727357314ce95fd075e289c1a732f9c922"
+    }
+  ]
+}

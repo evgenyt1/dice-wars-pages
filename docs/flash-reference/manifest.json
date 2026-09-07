@@ -1,0 +1,7598 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "sha256": "0690936010c150a0f2592e838dbbb9deebaef24e448c89f8c60f2f6667dbb7d1",
+    "compressedBytes": 100394,
+    "uncompressedBytes": 196609,
+    "version": 7,
+    "frameRate": 24.0,
+    "rootFrames": 15,
+    "stage": {
+      "width": 800,
+      "height": 600,
+      "background": "#ffffff"
+    }
+  },
+  "tool": "JPEXS Free Flash Decompiler v.26.2.1",
+  "topLevelTagCounts": {
+    "DefineButton2Tag": 8,
+    "DefineButtonSoundTag": 5,
+    "DefineEditTextTag": 5,
+    "DefineFont2Tag": 5,
+    "DefineFontNameTag": 5,
+    "DefineShape2Tag": 3,
+    "DefineShape3Tag": 73,
+    "DefineShapeTag": 30,
+    "DefineSoundTag": 8,
+    "DefineSpriteTag": 24,
+    "DefineTextTag": 19,
+    "DoActionTag": 2,
+    "DoInitActionTag": 5,
+    "ExportAssetsTag": 10,
+    "FrameLabelTag": 2,
+    "PlaceObject2Tag": 2,
+    "RemoveObject2Tag": 1,
+    "SetBackgroundColorTag": 1,
+    "ShowFrameTag": 15,
+    "SoundStreamHead2Tag": 1
+  },
+  "ownerAssignmentModuloVerified": true,
+  "sounds": [
+    {
+      "id": 1,
+      "linkage": "success.wav",
+      "sampleRate": 11025,
+      "channels": 1,
+      "bitrateKbps": 16,
+      "seekSamples": 1661,
+      "soundSampleCount": 2470,
+      "declaredDurationSeconds": 0.22403628117913832,
+      "mp3Bytes": 936,
+      "mp3Sha256": "2746ea4dd6f10078fe20647f8cdc7cceb75e766aba0b8c4ba2ca7db1c1243a3d",
+      "matchingPortFiles": [
+        "public/game-assets/audio/success.mp3"
+      ]
+    },
+    {
+      "id": 2,
+      "linkage": "myturn.wav",
+      "sampleRate": 11025,
+      "channels": 1,
+      "bitrateKbps": 16,
+      "seekSamples": 1661,
+      "soundSampleCount": 1883,
+      "declaredDurationSeconds": 0.1707936507936508,
+      "mp3Bytes": 832,
+      "mp3Sha256": "0e8bec7be695582bb0caa9acae35dc1e5196172acfc8b244ee6ffa6202e02129",
+      "matchingPortFiles": [
+        "public/game-assets/audio/my-turn.mp3"
+      ]
+    },
+    {
+      "id": 3,
+      "linkage": "fail.wav",
+      "sampleRate": 11025,
+      "channels": 1,
+      "bitrateKbps": 16,
+      "seekSamples": 1661,
+      "soundSampleCount": 4234,
+      "declaredDurationSeconds": 0.3840362811791383,
+      "mp3Bytes": 1248,
+      "mp3Sha256": "a386fe7994bdfc56b47ffedefd70945f22112464eceb724bba6ff22fc82a349b",
+      "matchingPortFiles": [
+        "public/game-assets/audio/fail.mp3"
+      ]
+    },
+    {
+      "id": 4,
+      "linkage": "dice.wav",
+      "sampleRate": 11025,
+      "channels": 1,
+      "bitrateKbps": 16,
+      "seekSamples": 1661,
+      "soundSampleCount": 158,
+      "declaredDurationSeconds": 0.014331065759637189,
+      "mp3Bytes": 520,
+      "mp3Sha256": "5f52d2f2ca57de531822a2bbe3649d404914efafcc82fb5ecc4b05b0f783cd86",
+      "matchingPortFiles": [
+        "public/game-assets/audio/dice.mp3"
+      ]
+    },
+    {
+      "id": 5,
+      "linkage": "click.wav",
+      "sampleRate": 11025,
+      "channels": 1,
+      "bitrateKbps": 16,
+      "seekSamples": 1661,
+      "soundSampleCount": 678,
+      "declaredDurationSeconds": 0.06149659863945578,
+      "mp3Bytes": 624,
+      "mp3Sha256": "b78769218d2f366713fcdaef6762f69fc8b44f892a9ca948885b1e28d1d4fb76",
+      "matchingPortFiles": [
+        "public/game-assets/audio/click.mp3"
+      ]
+    },
+    {
+      "id": 15,
+      "linkage": null,
+      "sampleRate": 11025,
+      "channels": 1,
+      "bitrateKbps": 16,
+      "seekSamples": 1661,
+      "soundSampleCount": 1817,
+      "declaredDurationSeconds": 0.16480725623582768,
+      "mp3Bytes": 832,
+      "mp3Sha256": "b4dddbb59c122b6ec7ae12ec41cd33b78bc7159376be9d944857152c425ab6a7",
+      "matchingPortFiles": []
+    },
+    {
+      "id": 151,
+      "linkage": null,
+      "sampleRate": 11025,
+      "channels": 1,
+      "bitrateKbps": 16,
+      "seekSamples": 1661,
+      "soundSampleCount": 12425,
+      "declaredDurationSeconds": 1.126984126984127,
+      "mp3Bytes": 2704,
+      "mp3Sha256": "3c5bd6588eaf212460876472e89b81ad3f3a85a7a3ae74beeb483ebdf3117d08",
+      "matchingPortFiles": [
+        "public/game-assets/audio/game-over.mp3"
+      ]
+    },
+    {
+      "id": 160,
+      "linkage": null,
+      "sampleRate": 11025,
+      "channels": 1,
+      "bitrateKbps": 16,
+      "seekSamples": 1661,
+      "soundSampleCount": 33075,
+      "declaredDurationSeconds": 3.0,
+      "mp3Bytes": 6448,
+      "mp3Sha256": "2b262e11abdffc13e633e25f92551eaf399a9fd039c5918212c3dfd017e3d3b6",
+      "matchingPortFiles": [
+        "public/game-assets/audio/victory.mp3"
+      ]
+    }
+  ],
+  "buttonSounds": [
+    {
+      "buttonId": "16",
+      "buttonSoundChar0": "0",
+      "buttonSoundChar1": "0",
+      "buttonSoundChar2": "15",
+      "buttonSoundChar3": "0"
+    },
+    {
+      "buttonId": "19",
+      "buttonSoundChar0": "0",
+      "buttonSoundChar1": "0",
+      "buttonSoundChar2": "15",
+      "buttonSoundChar3": "0"
+    },
+    {
+      "buttonId": "130",
+      "buttonSoundChar0": "0",
+      "buttonSoundChar1": "0",
+      "buttonSoundChar2": "15",
+      "buttonSoundChar3": "0"
+    },
+    {
+      "buttonId": "155",
+      "buttonSoundChar0": "0",
+      "buttonSoundChar1": "0",
+      "buttonSoundChar2": "15",
+      "buttonSoundChar3": "0"
+    },
+    {
+      "buttonId": "157",
+      "buttonSoundChar0": "0",
+      "buttonSoundChar1": "0",
+      "buttonSoundChar2": "15",
+      "buttonSoundChar3": "0"
+    }
+  ],
+  "fonts": [
+    {
+      "id": 9,
+      "name": "A-OTF 新ゴ Pro M\\u0000",
+      "glyphCount": 51,
+      "codes": [
+        32,
+        37,
+        40,
+        41,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        63,
+        65,
+        66,
+        67,
+        68,
+        69,
+        71,
+        73,
+        77,
+        78,
+        80,
+        83,
+        84,
+        97,
+        98,
+        99,
+        100,
+        101,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        114,
+        115,
+        116,
+        117,
+        119,
+        121
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Monotone\\u0000",
+      "glyphCount": 52,
+      "codes": [
+        32,
+        46,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        97,
+        100,
+        101,
+        103,
+        105,
+        108,
+        110,
+        111,
+        112,
+        114,
+        115,
+        116,
+        117,
+        121
+      ]
+    },
+    {
+      "id": 126,
+      "name": "A-OTF 新ゴ Pro L\\u0000",
+      "glyphCount": 10,
+      "codes": [
+        32,
+        46,
+        80,
+        97,
+        101,
+        105,
+        108,
+        115,
+        116,
+        119
+      ]
+    },
+    {
+      "id": 128,
+      "name": "Arial Black\\u0000",
+      "glyphCount": 17,
+      "codes": [
+        72,
+        77,
+        83,
+        97,
+        99,
+        101,
+        105,
+        107,
+        108,
+        109,
+        111,
+        112,
+        114,
+        115,
+        116,
+        117,
+        121
+      ]
+    },
+    {
+      "id": 152,
+      "name": "Slicker\\u0000",
+      "glyphCount": 7,
+      "codes": [
+        65,
+        69,
+        71,
+        77,
+        79,
+        82,
+        86
+      ]
+    }
+  ],
+  "scriptSha256": {
+    "scripts/DefineButton2_137/BUTTONCONDACTION on(release).as": "6577ec5b409b47dbf44b107f34cc13e5843911d83b724509ba5a5b858071fea0",
+    "scripts/DefineButton2_155/BUTTONCONDACTION on(release).as": "e7c74261ff2ca2510d43772a9cf2252ef0ab97de1398c9577a3b296327454440",
+    "scripts/DefineButton2_157/BUTTONCONDACTION on(release).as": "1caf326718670bd3f05450653e4cb623baa8c83321dcdb5772ebe365daed565e",
+    "scripts/DefineButton2_16/BUTTONCONDACTION on(release).as": "67eef79262064f63b68f42caae7b0ce7ab30e68b4dada4836768f8bfe4684bb3",
+    "scripts/DefineButton2_168/BUTTONCONDACTION on(release).as": "672b16f8bd444c0d3ee96e7e1b66bae763f99fcb7758c328bee7006374117832",
+    "scripts/DefineButton2_19/BUTTONCONDACTION on(release).as": "672b16f8bd444c0d3ee96e7e1b66bae763f99fcb7758c328bee7006374117832",
+    "scripts/DefineButton2_48/BUTTONCONDACTION on(release).as": "6597910567e0eecbb138df50c92d37616ef1180138d09cd25ddcb710d5a05bb6",
+    "scripts/DefineSprite_11/frame_1/DoAction.as": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "scripts/DefineSprite_11/frame_2/DoAction.as": "e8d3572aa9bd29898baa11647b25b8ac81b4b81a3161af77caf97ab4c35e0808",
+    "scripts/DefineSprite_11/frame_4/DoAction.as": "9f869dbfd05c1ceed11aea943176e7b32878eb759ed6c04ba577d2d7c44aa314",
+    "scripts/DefineSprite_124/frame_1/DoAction.as": "3271a793e3f9600314c6b0facc05023c4f3ed09c116d452966200a5d04735655",
+    "scripts/DefineSprite_134/frame_2/DoAction.as": "b5b9eb52734ce7e22c5222a47448562fa537efd8edc00d83adf526ac90e2480f",
+    "scripts/DefineSprite_134/frame_3/DoAction.as": "8ea8d06db4c5685889d8aab500da48fc4cac1028dd1e1744112700257445e778",
+    "scripts/DefineSprite_141/frame_1/DoAction.as": "c9bb4838d79a92f91edcb5c331dbda815d2dd0c0936105691e1d0d57e9a02843",
+    "scripts/DefineSprite_147/frame_1/DoAction.as": "b2aac8ea5eea4e078b62d141bc7d8b7bf45b3c143f41e397105621748e0eec26",
+    "scripts/DefineSprite_147/frame_15/DoAction.as": "a27faa49ff1a2e24f3561e424deb7f58c14e2a5a0480dc70691b48e792560763",
+    "scripts/DefineSprite_149/frame_1/DoAction.as": "b95a3820be22b76d4274d36c0e7b665b7c2e3d654ef220404569f608199f04bb",
+    "scripts/DefineSprite_149/frame_2/DoAction.as": "9f40e45f4daba69a61209530baec6b2d5a4b7af2afbd5c526dea2e8b1afda9b0",
+    "scripts/DefineSprite_149/frame_23/DoAction.as": "242f3b525916d1d6d63ddfbf8718996bc645b1440da94c955c1bc3fa99456b3c",
+    "scripts/DefineSprite_149/frame_4/DoAction.as": "43c0ca3072d5eb2671fb188a2b6b4405c9bb15a57abcc65e7532cec9b46364bf",
+    "scripts/DefineSprite_159/frame_50/DoAction.as": "c9bb4838d79a92f91edcb5c331dbda815d2dd0c0936105691e1d0d57e9a02843",
+    "scripts/DefineSprite_163/frame_11/DoAction.as": "488c75eecaf7edd9dd82a5dfb231a65ef1154c1c70dc51a7261293a027b06c4c",
+    "scripts/DefineSprite_163/frame_13/DoAction.as": "51b722f3660d77462409fe2838c4407b6befb66c07a9d76e865e6df7773c253c",
+    "scripts/DefineSprite_163/frame_14/DoAction.as": "488c75eecaf7edd9dd82a5dfb231a65ef1154c1c70dc51a7261293a027b06c4c",
+    "scripts/DefineSprite_163/frame_16/DoAction.as": "51b722f3660d77462409fe2838c4407b6befb66c07a9d76e865e6df7773c253c",
+    "scripts/DefineSprite_163/frame_17/DoAction.as": "488c75eecaf7edd9dd82a5dfb231a65ef1154c1c70dc51a7261293a027b06c4c",
+    "scripts/DefineSprite_163/frame_19/DoAction.as": "51b722f3660d77462409fe2838c4407b6befb66c07a9d76e865e6df7773c253c",
+    "scripts/DefineSprite_163/frame_20/DoAction.as": "488c75eecaf7edd9dd82a5dfb231a65ef1154c1c70dc51a7261293a027b06c4c",
+    "scripts/DefineSprite_163/frame_40/DoAction.as": "c9bb4838d79a92f91edcb5c331dbda815d2dd0c0936105691e1d0d57e9a02843",
+    "scripts/DefineSprite_169/frame_1/DoAction.as": "a99dd37df14a66556339dd1b6cdac3aa1d1b9c10d7fa47e2e0c6a06b50de0e43",
+    "scripts/DefineSprite_169/frame_12/DoAction.as": "4b5f635d1c8f196bd003a456ebce16607b9e714d68e9e46408587ed36bbaa023",
+    "scripts/DefineSprite_169/frame_14/DoAction.as": "3cc690573e1124d96baeb661fc74e325cd06853e744df342623acb889e05e7a6",
+    "scripts/DefineSprite_169/frame_15/DoAction.as": "52d8d03003e0b07a422dafa69c6ff5380ccc6c27c7b75f6554469e538e2891b4",
+    "scripts/DefineSprite_169/frame_16/DoAction.as": "3cc690573e1124d96baeb661fc74e325cd06853e744df342623acb889e05e7a6",
+    "scripts/DefineSprite_169/frame_20/DoAction.as": "483368005de4ecceaae92c309e955039d26ea26e94afe7350a03f0922a6936ef",
+    "scripts/DefineSprite_169/frame_5/DoAction.as": "37fbcc4616bc5403237a4470dc1b41d80c155e6687379f1f284088b0172aebe1",
+    "scripts/DefineSprite_169/frame_7/DoAction.as": "e994808ae2d8e0bf1a83aef76316ff043dff13d02fd3f59a0bb2479a18b15a22",
+    "scripts/DefineSprite_170/frame_1/DoAction.as": "55dea19dbb3b866c612b336f78b2c4ed2404fa0e83cf148f8073e78813151998",
+    "scripts/DefineSprite_170/frame_10/DoAction.as": "42feacf4c488c9761380c11840a50ee2cd5434042ee1c350cb842fe4ade41d12",
+    "scripts/DefineSprite_170/frame_15/DoAction.as": "5f4f0039ee36417b0e82a3bf4d22a4a414c83ab8f5483ee0ed8a2bcb6f1293de",
+    "scripts/DefineSprite_170/frame_2/DoAction.as": "535f32845235fc0d08a102a340c3998f13ebdbe67990a6e6d11617c036c8ec04",
+    "scripts/DefineSprite_170/frame_21/DoAction.as": "c80d4799a1aef692031a9049fd8234cf53b3c2adc84b879346ce5abf4d6fe47a",
+    "scripts/DefineSprite_170/frame_26/DoAction.as": "5faaf9de927918653850ef3016343ce44b60b9cd522db58af0712ced0b9f551f",
+    "scripts/DefineSprite_170/frame_27/DoAction.as": "800e52b7e1abab56e9f784e528ed1b225aece65e1f83a96648ccf759b0cd520d",
+    "scripts/DefineSprite_170/frame_3/DoAction.as": "d2f0e2947a6b5b8e98fa610146db4f4705742b6c4aa0fb341ea69c1b707ba428",
+    "scripts/DefineSprite_170/frame_30/DoAction.as": "39dd19edfb09f512fc482101c55efcfbb7cc412f086074b5b77ba7e1ccd90ffd",
+    "scripts/DefineSprite_170/frame_33/DoAction.as": "3ab238120fab1708a66063849f3b863bf078c67392fd5ab5d06d65caec83d946",
+    "scripts/DefineSprite_170/frame_34/DoAction.as": "3e7226b8db2ecbf6f36bdd23cddc973647c25c27732b958fff20b6ff60fe9b45",
+    "scripts/DefineSprite_170/frame_41/DoAction.as": "818feb6e1b5b354eea9cd9660094f622d3d917e3277ee1fd77c6fa59dfa850a2",
+    "scripts/DefineSprite_170/frame_47/DoAction.as": "80cc6858b08823b918ca91c42cb879c0d92bd4dad1d330fa4bb41b30eb2cadec",
+    "scripts/DefineSprite_170/frame_5/DoAction.as": "2ef2e1454aabfde191207ff0f11305f424a2f217eaac05cabf480c292ac843ad",
+    "scripts/DefineSprite_170/frame_56/DoAction.as": "fc7de6de5705d94ec41f3b531f6183c0fe60fc0bc52c311818e1021372c04045",
+    "scripts/DefineSprite_170/frame_63/DoAction.as": "6ff3bf0ec2f0e7cb43d50922fa4eb717f8f741cc02de44101dca9e2d5151ed79",
+    "scripts/DefineSprite_43/frame_1/DoAction.as": "c9bb4838d79a92f91edcb5c331dbda815d2dd0c0936105691e1d0d57e9a02843",
+    "scripts/DefineSprite_44/frame_1/DoAction.as": "a61c214cb9af50a004a79c3458410280a6d809379587cae01698fe03069ad561",
+    "scripts/DefineSprite_50/frame_1/DoAction.as": "3271a793e3f9600314c6b0facc05023c4f3ed09c116d452966200a5d04735655",
+    "scripts/DefineSprite_52/frame_1/DoAction.as": "b7817b94c6d0aeddccf8aa64dc06a5636bc0baaf7e9bc308499ef25aa6745360",
+    "scripts/DefineSprite_54/frame_1/DoAction.as": "c9bb4838d79a92f91edcb5c331dbda815d2dd0c0936105691e1d0d57e9a02843",
+    "scripts/DefineSprite_55/frame_1/DoAction.as": "28850288f34a236fb8c88401fc4d35539ab4d608e9ccf36ff18a6f8c63687f77",
+    "scripts/__Packages/dw/AreaData.as": "b4e44d67902982daff45951ed474999f6b1fcf355a3063a43986310dec7a2a4e",
+    "scripts/__Packages/dw/Game.as": "861ecab8bbe9e755f1c5f5150ff7ed4aba35b6bbb509162bc3178ca0153a644c",
+    "scripts/__Packages/dw/HistoryData.as": "613f3a3dbfca1f104aba8c3ac0634b9f96e9079cf0a41378e7263e105050649b",
+    "scripts/__Packages/dw/JoinData.as": "998704588eb81c747bd5cd088eb1875cb86b89b5ef6d561877a10ab39a72bfa8",
+    "scripts/__Packages/dw/PlayerData.as": "917a1bcb6671f61431583872dae4dd3cf809ad1bca80a2d08215d4651ca93710",
+    "scripts/frame_2/DoAction.as": "3962b9e68aa4a413d09389fc6cdb257c94f06828d54294203ed3cd1e32879050",
+    "scripts/frame_7/DoAction.as": "3271a793e3f9600314c6b0facc05023c4f3ed09c116d452966200a5d04735655"
+  },
+  "timelines": {
+    "root": [
+      {
+        "frame": 1,
+        "type": "SetBackgroundColorTag"
+      },
+      {
+        "frame": 1,
+        "type": "DefineSoundTag",
+        "soundId": 1
+      },
+      {
+        "frame": 1,
+        "type": "ExportAssetsTag"
+      },
+      {
+        "frame": 1,
+        "type": "DefineSoundTag",
+        "soundId": 2
+      },
+      {
+        "frame": 1,
+        "type": "ExportAssetsTag"
+      },
+      {
+        "frame": 1,
+        "type": "DefineSoundTag",
+        "soundId": 3
+      },
+      {
+        "frame": 1,
+        "type": "ExportAssetsTag"
+      },
+      {
+        "frame": 1,
+        "type": "DefineSoundTag",
+        "soundId": 4
+      },
+      {
+        "frame": 1,
+        "type": "ExportAssetsTag"
+      },
+      {
+        "frame": 1,
+        "type": "DefineSoundTag",
+        "soundId": 5
+      },
+      {
+        "frame": 1,
+        "type": "ExportAssetsTag"
+      },
+      {
+        "frame": 1,
+        "type": "DefineSpriteTag"
+      },
+      {
+        "frame": 1,
+        "type": "ExportAssetsTag"
+      },
+      {
+        "frame": 1,
+        "type": "DoInitActionTag"
+      },
+      {
+        "frame": 1,
+        "type": "DefineSpriteTag"
+      },
+      {
+        "frame": 1,
+        "type": "ExportAssetsTag"
+      },
+      {
+        "frame": 1,
+        "type": "DoInitActionTag"
+      },
+      {
+        "frame": 1,
+        "type": "DefineSpriteTag"
+      },
+      {
+        "frame": 1,
+        "type": "ExportAssetsTag"
+      },
+      {
+        "frame": 1,
+        "type": "DoInitActionTag"
+      },
+      {
+        "frame": 1,
+        "type": "DefineSpriteTag"
+      },
+      {
+        "frame": 1,
+        "type": "ExportAssetsTag"
+      },
+      {
+        "frame": 1,
+        "type": "DoInitActionTag"
+      },
+      {
+        "frame": 1,
+        "type": "DefineSpriteTag"
+      },
+      {
+        "frame": 1,
+        "type": "ExportAssetsTag"
+      },
+      {
+        "frame": 1,
+        "type": "DoInitActionTag"
+      },
+      {
+        "frame": 2,
+        "type": "FrameLabelTag",
+        "name": "load"
+      },
+      {
+        "frame": 2,
+        "type": "DoActionTag",
+        "actionSha256": "0abd49043b8ee525aeed6779bd98508e2285a061fec7165c8faaa684c5198faa"
+      },
+      {
+        "frame": 2,
+        "type": "DefineShape2Tag"
+      },
+      {
+        "frame": 2,
+        "type": "DefineShapeTag"
+      },
+      {
+        "frame": 2,
+        "type": "DefineSpriteTag"
+      },
+      {
+        "frame": 2,
+        "type": "DefineFont2Tag"
+      },
+      {
+        "frame": 2,
+        "type": "DefineFontNameTag"
+      },
+      {
+        "frame": 2,
+        "type": "DefineEditTextTag"
+      },
+      {
+        "frame": 2,
+        "type": "DefineSpriteTag"
+      },
+      {
+        "frame": 2,
+        "type": "PlaceObject2Tag",
+        "characterId": 11,
+        "depth": 1,
+        "ratio": 1,
+        "matrix": [
+          1.0,
+          0.0,
+          0.0,
+          1.0,
+          245.6,
+          274.4
+        ],
+        "move": false
+      },
+      {
+        "frame": 7,
+        "type": "RemoveObject2Tag",
+        "depth": 1
+      },
+      {
+        "frame": 7,
+        "type": "FrameLabelTag",
+        "name": "game"
+      },
+      {
+        "frame": 7,
+        "type": "DoActionTag",
+        "actionSha256": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShapeTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShapeTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape2Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineSoundTag",
+        "soundId": 15
+      },
+      {
+        "frame": 7,
+        "type": "DefineButton2Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineButtonSoundTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineFont2Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineFontNameTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineTextTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineButton2Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineButtonSoundTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineTextTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShapeTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShapeTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShapeTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShapeTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShapeTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShapeTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShapeTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShapeTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShapeTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShapeTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShapeTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShapeTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShapeTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShapeTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShapeTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShapeTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShapeTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShapeTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShapeTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShapeTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineSpriteTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineSpriteTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShapeTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShapeTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShapeTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineButton2Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineEditTextTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineSpriteTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineTextTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineSpriteTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineTextTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineSpriteTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineSpriteTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineSpriteTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineFont2Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineFontNameTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineTextTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineFont2Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineFontNameTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineTextTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineButton2Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineButtonSoundTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineTextTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineTextTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineTextTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineSpriteTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape2Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineTextTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineButton2Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShapeTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineEditTextTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShapeTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineSpriteTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineTextTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineTextTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShapeTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineEditTextTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineEditTextTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineSpriteTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineTextTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineSpriteTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineSoundTag",
+        "soundId": 151
+      },
+      {
+        "frame": 7,
+        "type": "DefineFont2Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineFontNameTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineTextTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineSpriteTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineButton2Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineButtonSoundTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineTextTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineButton2Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineButtonSoundTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineTextTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineSpriteTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineSoundTag",
+        "soundId": 160
+      },
+      {
+        "frame": 7,
+        "type": "DefineShape3Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineSpriteTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineSpriteTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineTextTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineTextTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineTextTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineShapeTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineButton2Tag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineSpriteTag"
+      },
+      {
+        "frame": 7,
+        "type": "DefineSpriteTag"
+      },
+      {
+        "frame": 7,
+        "type": "PlaceObject2Tag",
+        "characterId": 170,
+        "depth": 1,
+        "ratio": 6,
+        "matrix": [
+          1.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "move": false
+      }
+    ],
+    "171": {
+      "frameCount": 0,
+      "records": []
+    },
+    "172": {
+      "frameCount": 0,
+      "records": []
+    },
+    "173": {
+      "frameCount": 0,
+      "records": []
+    },
+    "174": {
+      "frameCount": 0,
+      "records": []
+    },
+    "175": {
+      "frameCount": 0,
+      "records": []
+    },
+    "8": {
+      "frameCount": 1,
+      "records": [
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 7,
+          "depth": 1,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "move": false
+        }
+      ]
+    },
+    "11": {
+      "frameCount": 4,
+      "records": [
+        {
+          "frame": 1,
+          "type": "DoActionTag",
+          "actionSha256": "6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d"
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 6,
+          "depth": 2,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 8,
+          "depth": 3,
+          "name": "bar",
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 10,
+          "depth": 5,
+          "name": "tf",
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -63.35,
+            -25.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 2,
+          "type": "DoActionTag",
+          "actionSha256": "3b75447c507fc4f54dc05046647b3eeb568701548bce950782cfdbd46d087aa0"
+        },
+        {
+          "frame": 4,
+          "type": "DoActionTag",
+          "actionSha256": "2a7d54440ea22b5f1ee06e44bc94009739c374353f2e2d32861ee778f3651ea2"
+        }
+      ]
+    },
+    "43": {
+      "frameCount": 90,
+      "records": [
+        {
+          "frame": 1,
+          "type": "FrameLabelTag",
+          "name": "青紫"
+        },
+        {
+          "frame": 1,
+          "type": "DoActionTag",
+          "actionSha256": "73e8a79e55f5b068c7bc5c09b8fdd4d6d303a7b21fb1ed960ae387d2519cca28"
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 23,
+          "depth": 1,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 24,
+          "depth": 2,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 2,
+          "type": "PlaceObject2Tag",
+          "characterId": 25,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 3,
+          "type": "PlaceObject2Tag",
+          "characterId": 26,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 4,
+          "type": "PlaceObject2Tag",
+          "characterId": 27,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 5,
+          "type": "PlaceObject2Tag",
+          "characterId": 28,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 6,
+          "type": "PlaceObject2Tag",
+          "characterId": 29,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 7,
+          "type": "RemoveObject2Tag",
+          "depth": 2
+        },
+        {
+          "frame": 11,
+          "type": "FrameLabelTag",
+          "name": "黄緑"
+        },
+        {
+          "frame": 11,
+          "type": "PlaceObject2Tag",
+          "characterId": 30,
+          "depth": 1,
+          "move": true
+        },
+        {
+          "frame": 11,
+          "type": "PlaceObject2Tag",
+          "characterId": 31,
+          "depth": 2,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 12,
+          "type": "PlaceObject2Tag",
+          "characterId": 32,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 13,
+          "type": "PlaceObject2Tag",
+          "characterId": 33,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 14,
+          "type": "PlaceObject2Tag",
+          "characterId": 34,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 15,
+          "type": "PlaceObject2Tag",
+          "characterId": 35,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 16,
+          "type": "PlaceObject2Tag",
+          "characterId": 36,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 17,
+          "type": "RemoveObject2Tag",
+          "depth": 2
+        },
+        {
+          "frame": 21,
+          "type": "FrameLabelTag",
+          "name": "濃緑"
+        },
+        {
+          "frame": 21,
+          "type": "PlaceObject2Tag",
+          "characterId": 37,
+          "depth": 1,
+          "move": true
+        },
+        {
+          "frame": 21,
+          "type": "PlaceObject2Tag",
+          "characterId": 24,
+          "depth": 2,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 22,
+          "type": "PlaceObject2Tag",
+          "characterId": 25,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 23,
+          "type": "PlaceObject2Tag",
+          "characterId": 26,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 24,
+          "type": "PlaceObject2Tag",
+          "characterId": 27,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 25,
+          "type": "PlaceObject2Tag",
+          "characterId": 28,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 26,
+          "type": "PlaceObject2Tag",
+          "characterId": 29,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 27,
+          "type": "RemoveObject2Tag",
+          "depth": 2
+        },
+        {
+          "frame": 31,
+          "type": "FrameLabelTag",
+          "name": "マゼンタ"
+        },
+        {
+          "frame": 31,
+          "type": "PlaceObject2Tag",
+          "characterId": 38,
+          "depth": 1,
+          "move": true
+        },
+        {
+          "frame": 31,
+          "type": "PlaceObject2Tag",
+          "characterId": 24,
+          "depth": 2,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 32,
+          "type": "PlaceObject2Tag",
+          "characterId": 25,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 33,
+          "type": "PlaceObject2Tag",
+          "characterId": 26,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 34,
+          "type": "PlaceObject2Tag",
+          "characterId": 27,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 35,
+          "type": "PlaceObject2Tag",
+          "characterId": 28,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 36,
+          "type": "PlaceObject2Tag",
+          "characterId": 29,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 37,
+          "type": "RemoveObject2Tag",
+          "depth": 2
+        },
+        {
+          "frame": 41,
+          "type": "FrameLabelTag",
+          "name": "オレンジ"
+        },
+        {
+          "frame": 41,
+          "type": "PlaceObject2Tag",
+          "characterId": 39,
+          "depth": 1,
+          "move": true
+        },
+        {
+          "frame": 41,
+          "type": "PlaceObject2Tag",
+          "characterId": 31,
+          "depth": 2,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 42,
+          "type": "PlaceObject2Tag",
+          "characterId": 32,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 43,
+          "type": "PlaceObject2Tag",
+          "characterId": 33,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 44,
+          "type": "PlaceObject2Tag",
+          "characterId": 34,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 45,
+          "type": "PlaceObject2Tag",
+          "characterId": 35,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 46,
+          "type": "PlaceObject2Tag",
+          "characterId": 36,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 47,
+          "type": "RemoveObject2Tag",
+          "depth": 2
+        },
+        {
+          "frame": 51,
+          "type": "FrameLabelTag",
+          "name": "シアン"
+        },
+        {
+          "frame": 51,
+          "type": "PlaceObject2Tag",
+          "characterId": 40,
+          "depth": 1,
+          "move": true
+        },
+        {
+          "frame": 51,
+          "type": "PlaceObject2Tag",
+          "characterId": 31,
+          "depth": 2,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 52,
+          "type": "PlaceObject2Tag",
+          "characterId": 32,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 53,
+          "type": "PlaceObject2Tag",
+          "characterId": 33,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 54,
+          "type": "PlaceObject2Tag",
+          "characterId": 34,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 55,
+          "type": "PlaceObject2Tag",
+          "characterId": 35,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 56,
+          "type": "PlaceObject2Tag",
+          "characterId": 36,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 57,
+          "type": "RemoveObject2Tag",
+          "depth": 2
+        },
+        {
+          "frame": 61,
+          "type": "FrameLabelTag",
+          "name": "黄色"
+        },
+        {
+          "frame": 61,
+          "type": "PlaceObject2Tag",
+          "characterId": 41,
+          "depth": 1,
+          "move": true
+        },
+        {
+          "frame": 61,
+          "type": "PlaceObject2Tag",
+          "characterId": 31,
+          "depth": 2,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 62,
+          "type": "PlaceObject2Tag",
+          "characterId": 32,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 63,
+          "type": "PlaceObject2Tag",
+          "characterId": 33,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 64,
+          "type": "PlaceObject2Tag",
+          "characterId": 34,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 65,
+          "type": "PlaceObject2Tag",
+          "characterId": 35,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 66,
+          "type": "PlaceObject2Tag",
+          "characterId": 36,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 67,
+          "type": "RemoveObject2Tag",
+          "depth": 2
+        },
+        {
+          "frame": 71,
+          "type": "FrameLabelTag",
+          "name": "赤"
+        },
+        {
+          "frame": 71,
+          "type": "PlaceObject2Tag",
+          "characterId": 42,
+          "depth": 1,
+          "move": true
+        },
+        {
+          "frame": 71,
+          "type": "PlaceObject2Tag",
+          "characterId": 24,
+          "depth": 2,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 72,
+          "type": "PlaceObject2Tag",
+          "characterId": 25,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 73,
+          "type": "PlaceObject2Tag",
+          "characterId": 26,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 74,
+          "type": "PlaceObject2Tag",
+          "characterId": 27,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 75,
+          "type": "PlaceObject2Tag",
+          "characterId": 28,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 76,
+          "type": "PlaceObject2Tag",
+          "characterId": 29,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 77,
+          "type": "RemoveObject2Tag",
+          "depth": 2
+        }
+      ]
+    },
+    "44": {
+      "frameCount": 1,
+      "records": [
+        {
+          "frame": 1,
+          "type": "DoActionTag",
+          "actionSha256": "7fe56f13b28c378e45a48f23c15ddf372177c21d059c142959a1fad72eeb9b41"
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 22,
+          "depth": 4,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 5,
+          "name": "mc2",
+          "matrix": [
+            0.32032776,
+            -0.05784607,
+            0.05784607,
+            0.32032776,
+            181.2,
+            63.4
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 8,
+          "name": "mc1",
+          "matrix": [
+            0.4164734,
+            0.1399231,
+            -0.1399231,
+            0.4164734,
+            294.15,
+            129.75
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 11,
+          "name": "mc0",
+          "matrix": [
+            0.46643066,
+            -0.20352173,
+            0.20352173,
+            0.46643066,
+            118.5,
+            196.8
+          ],
+          "move": false
+        }
+      ]
+    },
+    "50": {
+      "frameCount": 1,
+      "records": [
+        {
+          "frame": 1,
+          "type": "DoActionTag",
+          "actionSha256": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd"
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 48,
+          "depth": 1,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 49,
+          "depth": 3,
+          "name": "tf",
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            2.0,
+            1.5
+          ],
+          "move": false
+        }
+      ]
+    },
+    "52": {
+      "frameCount": 1,
+      "records": [
+        {
+          "frame": 1,
+          "type": "DoActionTag",
+          "actionSha256": "367afbdd326cd7b3ed8a704a0bca7ba8aaa087ddf450edf5c13d9b4abbf5b4a8"
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 45,
+          "depth": 1,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 50,
+          "depth": 2,
+          "name": "p0",
+          "matrix": [
+            0.92633057,
+            0.0,
+            0.0,
+            0.9251709,
+            20.0,
+            30.45
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 50,
+          "depth": 6,
+          "name": "p1",
+          "matrix": [
+            0.92633057,
+            0.0,
+            0.0,
+            0.9251709,
+            57.05,
+            30.45
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 50,
+          "depth": 10,
+          "name": "p2",
+          "matrix": [
+            0.92633057,
+            0.0,
+            0.0,
+            0.9251709,
+            94.0,
+            30.45
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 50,
+          "depth": 14,
+          "name": "p3",
+          "matrix": [
+            0.92633057,
+            0.0,
+            0.0,
+            0.9251709,
+            131.05,
+            30.45
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 50,
+          "depth": 18,
+          "name": "p4",
+          "matrix": [
+            0.92633057,
+            0.0,
+            0.0,
+            0.9251709,
+            168.0,
+            30.45
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 50,
+          "depth": 22,
+          "name": "p5",
+          "matrix": [
+            0.92633057,
+            0.0,
+            0.0,
+            0.9251709,
+            205.05,
+            30.45
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 50,
+          "depth": 26,
+          "name": "p6",
+          "matrix": [
+            0.92633057,
+            0.0,
+            0.0,
+            0.9251709,
+            242.05,
+            30.45
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 51,
+          "depth": 30,
+          "matrix": [
+            1.0005646,
+            0.0,
+            0.0,
+            1.0,
+            0.05,
+            6.3
+          ],
+          "move": false
+        }
+      ]
+    },
+    "54": {
+      "frameCount": 1,
+      "records": [
+        {
+          "frame": 1,
+          "type": "DoActionTag",
+          "actionSha256": "73e8a79e55f5b068c7bc5c09b8fdd4d6d303a7b21fb1ed960ae387d2519cca28"
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 13,
+          "depth": 1,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 16,
+          "depth": 2,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            544.0,
+            324.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 18,
+          "depth": 6,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            0.9993439,
+            547.25,
+            326.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 19,
+          "depth": 7,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            544.0,
+            376.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 20,
+          "depth": 11,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            0.9993439,
+            547.25,
+            378.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 21,
+          "depth": 13,
+          "matrix": [
+            2.272232,
+            0.0,
+            0.0,
+            2.272232,
+            -46.6,
+            -208.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 44,
+          "depth": 14,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            54.25,
+            189.75
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 52,
+          "depth": 26,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            454.35,
+            468.2
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 53,
+          "depth": 57,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            450.9,
+            181.4
+          ],
+          "move": false
+        }
+      ]
+    },
+    "55": {
+      "frameCount": 1,
+      "records": [
+        {
+          "frame": 1,
+          "type": "DoActionTag",
+          "actionSha256": "22fd2004344675f3a7dde38e94fa2be6e09dc92b1826aabf8890b248c70b29a9"
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 12,
+          "depth": 1,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "move": false
+        }
+      ]
+    },
+    "124": {
+      "frameCount": 90,
+      "records": [
+        {
+          "frame": 1,
+          "type": "DoActionTag",
+          "actionSha256": "0a6361b3a802f55cd5ae06101c88a1e216320fe11cc0cfe1d791eed08a1200fd"
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 56,
+          "depth": 2,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 2,
+          "type": "PlaceObject2Tag",
+          "characterId": 57,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 3,
+          "type": "PlaceObject2Tag",
+          "characterId": 58,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 4,
+          "type": "PlaceObject2Tag",
+          "characterId": 59,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 5,
+          "type": "PlaceObject2Tag",
+          "characterId": 60,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 6,
+          "type": "PlaceObject2Tag",
+          "characterId": 61,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 7,
+          "type": "PlaceObject2Tag",
+          "characterId": 62,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 8,
+          "type": "PlaceObject2Tag",
+          "characterId": 63,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 11,
+          "type": "PlaceObject2Tag",
+          "characterId": 64,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 12,
+          "type": "PlaceObject2Tag",
+          "characterId": 65,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 13,
+          "type": "PlaceObject2Tag",
+          "characterId": 66,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 14,
+          "type": "PlaceObject2Tag",
+          "characterId": 67,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 15,
+          "type": "PlaceObject2Tag",
+          "characterId": 68,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 16,
+          "type": "PlaceObject2Tag",
+          "characterId": 69,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 17,
+          "type": "PlaceObject2Tag",
+          "characterId": 70,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 18,
+          "type": "PlaceObject2Tag",
+          "characterId": 71,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 21,
+          "type": "PlaceObject2Tag",
+          "characterId": 72,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 22,
+          "type": "PlaceObject2Tag",
+          "characterId": 73,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 23,
+          "type": "PlaceObject2Tag",
+          "characterId": 74,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 24,
+          "type": "PlaceObject2Tag",
+          "characterId": 75,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 25,
+          "type": "PlaceObject2Tag",
+          "characterId": 76,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 26,
+          "type": "PlaceObject2Tag",
+          "characterId": 77,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 27,
+          "type": "PlaceObject2Tag",
+          "characterId": 78,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 28,
+          "type": "PlaceObject2Tag",
+          "characterId": 79,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 31,
+          "type": "PlaceObject2Tag",
+          "characterId": 80,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 32,
+          "type": "PlaceObject2Tag",
+          "characterId": 81,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 33,
+          "type": "PlaceObject2Tag",
+          "characterId": 82,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 34,
+          "type": "PlaceObject2Tag",
+          "characterId": 83,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 35,
+          "type": "PlaceObject2Tag",
+          "characterId": 84,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 36,
+          "type": "PlaceObject2Tag",
+          "characterId": 85,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 37,
+          "type": "PlaceObject2Tag",
+          "characterId": 86,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 38,
+          "type": "PlaceObject2Tag",
+          "characterId": 87,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 41,
+          "type": "PlaceObject2Tag",
+          "characterId": 88,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 42,
+          "type": "PlaceObject2Tag",
+          "characterId": 89,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 43,
+          "type": "PlaceObject2Tag",
+          "characterId": 90,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 44,
+          "type": "PlaceObject2Tag",
+          "characterId": 91,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 45,
+          "type": "PlaceObject2Tag",
+          "characterId": 92,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 46,
+          "type": "PlaceObject2Tag",
+          "characterId": 93,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 47,
+          "type": "PlaceObject2Tag",
+          "characterId": 94,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 48,
+          "type": "PlaceObject2Tag",
+          "characterId": 95,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 51,
+          "type": "PlaceObject2Tag",
+          "characterId": 96,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 52,
+          "type": "PlaceObject2Tag",
+          "characterId": 97,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 53,
+          "type": "PlaceObject2Tag",
+          "characterId": 98,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 54,
+          "type": "PlaceObject2Tag",
+          "characterId": 99,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 55,
+          "type": "PlaceObject2Tag",
+          "characterId": 100,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 56,
+          "type": "PlaceObject2Tag",
+          "characterId": 101,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 57,
+          "type": "PlaceObject2Tag",
+          "characterId": 102,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 58,
+          "type": "PlaceObject2Tag",
+          "characterId": 103,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 61,
+          "type": "PlaceObject2Tag",
+          "characterId": 104,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 62,
+          "type": "PlaceObject2Tag",
+          "characterId": 105,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 63,
+          "type": "PlaceObject2Tag",
+          "characterId": 106,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 64,
+          "type": "PlaceObject2Tag",
+          "characterId": 107,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 65,
+          "type": "PlaceObject2Tag",
+          "characterId": 108,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 66,
+          "type": "PlaceObject2Tag",
+          "characterId": 109,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 67,
+          "type": "PlaceObject2Tag",
+          "characterId": 110,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 68,
+          "type": "PlaceObject2Tag",
+          "characterId": 111,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 71,
+          "type": "PlaceObject2Tag",
+          "characterId": 112,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 72,
+          "type": "PlaceObject2Tag",
+          "characterId": 113,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 73,
+          "type": "PlaceObject2Tag",
+          "characterId": 114,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 74,
+          "type": "PlaceObject2Tag",
+          "characterId": 115,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 75,
+          "type": "PlaceObject2Tag",
+          "characterId": 116,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 76,
+          "type": "PlaceObject2Tag",
+          "characterId": 117,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 77,
+          "type": "PlaceObject2Tag",
+          "characterId": 118,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 78,
+          "type": "PlaceObject2Tag",
+          "characterId": 119,
+          "depth": 2,
+          "move": true
+        },
+        {
+          "frame": 81,
+          "type": "RemoveObject2Tag",
+          "depth": 2
+        },
+        {
+          "frame": 81,
+          "type": "FrameLabelTag",
+          "name": "MCのダイス"
+        },
+        {
+          "frame": 81,
+          "type": "PlaceObject2Tag",
+          "characterId": 120,
+          "depth": 1,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 81,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 14,
+          "name": "d0",
+          "ratio": 80,
+          "matrix": [
+            0.085372925,
+            0.0,
+            0.0,
+            0.085235596,
+            22.75,
+            11.8
+          ],
+          "move": false
+        },
+        {
+          "frame": 82,
+          "type": "PlaceObject2Tag",
+          "characterId": 121,
+          "depth": 1,
+          "move": true
+        },
+        {
+          "frame": 82,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 17,
+          "name": "d1",
+          "ratio": 81,
+          "matrix": [
+            0.085372925,
+            0.0,
+            0.0,
+            0.085235596,
+            22.75,
+            -2.2
+          ],
+          "move": false
+        },
+        {
+          "frame": 83,
+          "type": "PlaceObject2Tag",
+          "characterId": 122,
+          "depth": 1,
+          "move": true
+        },
+        {
+          "frame": 83,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 20,
+          "name": "d2",
+          "ratio": 82,
+          "matrix": [
+            0.085372925,
+            0.0,
+            0.0,
+            0.085235596,
+            22.75,
+            -16.2
+          ],
+          "move": false
+        },
+        {
+          "frame": 84,
+          "type": "PlaceObject2Tag",
+          "characterId": 123,
+          "depth": 1,
+          "move": true
+        },
+        {
+          "frame": 84,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 23,
+          "name": "d3",
+          "ratio": 83,
+          "matrix": [
+            0.085372925,
+            0.0,
+            0.0,
+            0.085235596,
+            22.75,
+            -30.2
+          ],
+          "move": false
+        },
+        {
+          "frame": 85,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 2,
+          "name": "d4",
+          "ratio": 84,
+          "matrix": [
+            0.085372925,
+            0.0,
+            0.0,
+            0.085235596,
+            2.5,
+            4.05
+          ],
+          "move": false
+        },
+        {
+          "frame": 86,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 5,
+          "name": "d5",
+          "ratio": 85,
+          "matrix": [
+            0.085372925,
+            0.0,
+            0.0,
+            0.085235596,
+            2.5,
+            -9.95
+          ],
+          "move": false
+        },
+        {
+          "frame": 87,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 8,
+          "name": "d6",
+          "ratio": 86,
+          "matrix": [
+            0.085372925,
+            0.0,
+            0.0,
+            0.085235596,
+            2.5,
+            -23.95
+          ],
+          "move": false
+        },
+        {
+          "frame": 88,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 11,
+          "name": "d7",
+          "ratio": 87,
+          "matrix": [
+            0.085372925,
+            0.0,
+            0.0,
+            0.085235596,
+            2.5,
+            -37.95
+          ],
+          "move": false
+        }
+      ]
+    },
+    "134": {
+      "frameCount": 3,
+      "records": [
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 125,
+          "depth": 1,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 127,
+          "depth": 2,
+          "matrix": [
+            1.0004578,
+            0.0,
+            0.0,
+            1.0018768,
+            2.0,
+            200.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 129,
+          "depth": 3,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1030.2,
+            20.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 2,
+          "type": "RemoveObject2Tag",
+          "depth": 1
+        },
+        {
+          "frame": 2,
+          "type": "DoActionTag",
+          "actionSha256": "53041546470b5a94f3e895a986d50923225408682036287283e0393579273af7"
+        },
+        {
+          "frame": 3,
+          "type": "RemoveObject2Tag",
+          "depth": 2
+        },
+        {
+          "frame": 3,
+          "type": "RemoveObject2Tag",
+          "depth": 3
+        },
+        {
+          "frame": 3,
+          "type": "DoActionTag",
+          "actionSha256": "17d8d3e5f798595e696bd0a3bf670ff0d41fc86de1a2011567db108a34b8a91a"
+        },
+        {
+          "frame": 3,
+          "type": "PlaceObject2Tag",
+          "characterId": 130,
+          "depth": 1,
+          "name": "btNo",
+          "ratio": 2,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            555.1,
+            511.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 3,
+          "type": "PlaceObject2Tag",
+          "characterId": 130,
+          "depth": 5,
+          "name": "btYes",
+          "ratio": 2,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            415.05,
+            511.05
+          ],
+          "move": false
+        },
+        {
+          "frame": 3,
+          "type": "PlaceObject2Tag",
+          "characterId": 131,
+          "depth": 9,
+          "matrix": [
+            1.000534,
+            0.0,
+            0.0,
+            1.0013275,
+            101.8,
+            510.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 3,
+          "type": "PlaceObject2Tag",
+          "characterId": 132,
+          "depth": 10,
+          "matrix": [
+            1.0001526,
+            0.0,
+            0.0,
+            1.0028839,
+            463.05,
+            514.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 3,
+          "type": "PlaceObject2Tag",
+          "characterId": 133,
+          "depth": 11,
+          "matrix": [
+            1.0001526,
+            0.0,
+            0.0,
+            1.0028839,
+            605.05,
+            514.0
+          ],
+          "move": false
+        }
+      ]
+    },
+    "141": {
+      "frameCount": 2,
+      "records": [
+        {
+          "frame": 1,
+          "type": "DoActionTag",
+          "actionSha256": "73e8a79e55f5b068c7bc5c09b8fdd4d6d303a7b21fb1ed960ae387d2519cca28"
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 138,
+          "depth": 2,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 3,
+          "name": "mcDice",
+          "matrix": [
+            0.09629822,
+            0.0,
+            0.0,
+            0.09629822,
+            -22.05,
+            0.05
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 139,
+          "depth": 6,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            -0.65,
+            -17.25
+          ],
+          "move": false
+        },
+        {
+          "frame": 2,
+          "type": "PlaceObject2Tag",
+          "characterId": 140,
+          "depth": 1,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "move": false
+        }
+      ]
+    },
+    "147": {
+      "frameCount": 40,
+      "records": [
+        {
+          "frame": 1,
+          "type": "DoActionTag",
+          "actionSha256": "60d424a37e1f84d92ab329dc6bb58c34dbf78d5603fd4f204afb76441ec21971"
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 1,
+          "name": "dice0_0",
+          "matrix": [
+            0.09991455,
+            0.0,
+            0.0,
+            0.09977722,
+            426.35,
+            502.65
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 4,
+          "name": "dice0_1",
+          "matrix": [
+            0.09991455,
+            0.0,
+            0.0,
+            0.09977722,
+            461.35,
+            502.65
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 7,
+          "name": "dice0_2",
+          "matrix": [
+            0.09991455,
+            0.0,
+            0.0,
+            0.09977722,
+            496.35,
+            502.65
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 10,
+          "name": "dice0_3",
+          "matrix": [
+            0.09991455,
+            0.0,
+            0.0,
+            0.09991455,
+            531.35,
+            502.65
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 13,
+          "name": "dice0_4",
+          "matrix": [
+            0.09991455,
+            0.0,
+            0.0,
+            0.09991455,
+            566.35,
+            502.65
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 16,
+          "name": "dice0_5",
+          "matrix": [
+            0.09991455,
+            0.0,
+            0.0,
+            0.09991455,
+            601.35,
+            502.65
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 19,
+          "name": "dice0_6",
+          "matrix": [
+            0.09991455,
+            0.0,
+            0.0,
+            0.09991455,
+            636.35,
+            502.65
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 22,
+          "name": "dice0_7",
+          "matrix": [
+            0.09991455,
+            0.0,
+            0.0,
+            0.09977722,
+            671.35,
+            502.65
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 25,
+          "name": "dice1_7",
+          "matrix": [
+            0.09991455,
+            0.0,
+            0.0,
+            0.09963989,
+            125.0,
+            502.65
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 28,
+          "name": "dice1_6",
+          "matrix": [
+            0.09991455,
+            0.0,
+            0.0,
+            0.09963989,
+            160.0,
+            502.65
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 31,
+          "name": "dice1_5",
+          "matrix": [
+            0.09991455,
+            0.0,
+            0.0,
+            0.09963989,
+            195.0,
+            502.65
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 34,
+          "name": "dice1_4",
+          "matrix": [
+            0.09991455,
+            0.0,
+            0.0,
+            0.09977722,
+            230.0,
+            502.65
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 37,
+          "name": "dice1_3",
+          "matrix": [
+            0.09991455,
+            0.0,
+            0.0,
+            0.09977722,
+            265.0,
+            502.65
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 40,
+          "name": "dice1_2",
+          "matrix": [
+            0.09991455,
+            0.0,
+            0.0,
+            0.09977722,
+            300.0,
+            502.65
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 43,
+          "name": "dice1_1",
+          "matrix": [
+            0.09991455,
+            0.0,
+            0.0,
+            0.09977722,
+            334.95,
+            502.65
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 46,
+          "name": "dice1_0",
+          "matrix": [
+            0.09991455,
+            0.0,
+            0.0,
+            0.09963989,
+            369.95,
+            502.65
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 145,
+          "depth": 49,
+          "name": "tf0",
+          "matrix": [
+            0.9985199,
+            0.0,
+            0.0,
+            1.0,
+            634.9,
+            477.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 146,
+          "depth": 50,
+          "name": "tf1",
+          "matrix": [
+            0.9985199,
+            0.0,
+            0.0,
+            1.0,
+            -10.45,
+            477.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 15,
+          "type": "FrameLabelTag",
+          "name": "end"
+        },
+        {
+          "frame": 15,
+          "type": "DoActionTag",
+          "actionSha256": "2d3c2cde18e9f25c37f107c8b096933ad95ac088b5f3d852a4e4fbd0f349af5a"
+        }
+      ]
+    },
+    "149": {
+      "frameCount": 23,
+      "records": [
+        {
+          "frame": 1,
+          "type": "DoActionTag",
+          "actionSha256": "4c76f35ba1a5732071624b70dea26709a7d2cdb260fa02226638e7b6e0cb68d5"
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 1,
+          "name": "mcStock0",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            14.25,
+            440.05
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 4,
+          "name": "mcStock1",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            40.0,
+            440.05
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 7,
+          "name": "mcStock2",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            65.8,
+            440.05
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 10,
+          "name": "mcStock3",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            91.55,
+            440.05
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 13,
+          "name": "mcStock4",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            117.35,
+            440.05
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 16,
+          "name": "mcStock5",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            143.15,
+            440.05
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 19,
+          "name": "mcStock6",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            168.95,
+            440.05
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 22,
+          "name": "mcStock7",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            194.75,
+            440.05
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 25,
+          "name": "mcStock8",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            220.5,
+            440.05
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 28,
+          "name": "mcStock9",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            246.3,
+            440.05
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 31,
+          "name": "mcStock10",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            272.1,
+            440.05
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 34,
+          "name": "mcStock11",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            297.85,
+            440.05
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 37,
+          "name": "mcStock12",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            323.65,
+            440.05
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 40,
+          "name": "mcStock13",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            349.45,
+            440.05
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 43,
+          "name": "mcStock14",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            375.25,
+            440.05
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 46,
+          "name": "mcStock15",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            400.95,
+            440.05
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 49,
+          "name": "mcStock16",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            426.8,
+            440.05
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 52,
+          "name": "mcStock17",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            452.6,
+            440.05
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 55,
+          "name": "mcStock18",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            478.35,
+            440.05
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 58,
+          "name": "mcStock19",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            504.2,
+            440.05
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 61,
+          "name": "mcStock20",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            529.95,
+            440.05
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 64,
+          "name": "mcStock21",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            555.75,
+            440.05
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 67,
+          "name": "mcStock22",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            581.45,
+            440.05
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 70,
+          "name": "mcStock23",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            607.3,
+            440.05
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 73,
+          "name": "mcStock24",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            633.1,
+            440.05
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 76,
+          "name": "mcStock25",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            658.85,
+            440.05
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 79,
+          "name": "mcStock26",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            684.7,
+            440.05
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 82,
+          "name": "mcStock27",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            710.45,
+            440.05
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 85,
+          "name": "mcStock28",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            736.2,
+            440.05
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 88,
+          "name": "mcStock29",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            761.95,
+            440.05
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 91,
+          "name": "mcStock30",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            787.8,
+            440.05
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 94,
+          "name": "mcStock31",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            813.6,
+            440.05
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 97,
+          "name": "mcStock32",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            13.95,
+            469.45
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 100,
+          "name": "mcStock33",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            39.65,
+            469.45
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 103,
+          "name": "mcStock34",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            65.45,
+            469.45
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 106,
+          "name": "mcStock35",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            91.25,
+            469.45
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 109,
+          "name": "mcStock36",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            117.05,
+            469.45
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 112,
+          "name": "mcStock37",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            142.8,
+            469.45
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 115,
+          "name": "mcStock38",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            168.65,
+            469.45
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 118,
+          "name": "mcStock39",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            194.45,
+            469.45
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 121,
+          "name": "mcStock40",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            220.15,
+            469.45
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 124,
+          "name": "mcStock41",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            245.95,
+            469.45
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 127,
+          "name": "mcStock42",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            271.75,
+            469.45
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 130,
+          "name": "mcStock43",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            297.55,
+            469.45
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 133,
+          "name": "mcStock44",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            323.3,
+            469.45
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 136,
+          "name": "mcStock45",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            349.15,
+            469.45
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 139,
+          "name": "mcStock46",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            374.9,
+            469.45
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 142,
+          "name": "mcStock47",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            400.65,
+            469.45
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 145,
+          "name": "mcStock48",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            426.5,
+            469.45
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 148,
+          "name": "mcStock49",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            452.25,
+            469.45
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 151,
+          "name": "mcStock50",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            478.05,
+            469.45
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 154,
+          "name": "mcStock51",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            503.85,
+            469.45
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 157,
+          "name": "mcStock52",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            529.6,
+            469.45
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 160,
+          "name": "mcStock53",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            555.4,
+            469.45
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 163,
+          "name": "mcStock54",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            581.15,
+            469.45
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 166,
+          "name": "mcStock55",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            607.0,
+            469.45
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 169,
+          "name": "mcStock56",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            632.75,
+            469.45
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 172,
+          "name": "mcStock57",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            658.55,
+            469.45
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 175,
+          "name": "mcStock58",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            684.4,
+            469.45
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 178,
+          "name": "mcStock59",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            710.1,
+            469.45
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 181,
+          "name": "mcStock60",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            735.9,
+            469.45
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 184,
+          "name": "mcStock61",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            761.65,
+            469.45
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 187,
+          "name": "mcStock62",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            787.5,
+            469.45
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 43,
+          "depth": 190,
+          "name": "mcStock63",
+          "matrix": [
+            0.065582275,
+            0.0,
+            0.0,
+            0.065582275,
+            813.25,
+            469.45
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 148,
+          "depth": 193,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            566.95,
+            620.3
+          ],
+          "move": false
+        },
+        {
+          "frame": 2,
+          "type": "FrameLabelTag",
+          "name": "supply"
+        },
+        {
+          "frame": 2,
+          "type": "DoActionTag",
+          "actionSha256": "d2f02139fdac158f4fb5d07655f6d79768a67c6b4662056ee0f30609afa31a03"
+        },
+        {
+          "frame": 4,
+          "type": "DoActionTag",
+          "actionSha256": "fa7b0aa50556cfefbb78ba33c7d2d799c66196097c67ba10e8e2514a664f8123"
+        },
+        {
+          "frame": 11,
+          "type": "FrameLabelTag",
+          "name": "wait"
+        },
+        {
+          "frame": 23,
+          "type": "DoActionTag",
+          "actionSha256": "95b5dfd21e3b3477f56fc6f12e0c1b4d16d42b32b0e5b80b9594f60c3b0c33c6"
+        }
+      ]
+    },
+    "154": {
+      "frameCount": 1,
+      "records": [
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 153,
+          "depth": 1,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            2.0,
+            2.0
+          ],
+          "move": false
+        }
+      ]
+    },
+    "159": {
+      "frameCount": 50,
+      "records": [
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 150,
+          "depth": 1,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 7,
+          "type": "StartSoundTag",
+          "soundId": 151
+        },
+        {
+          "frame": 8,
+          "type": "PlaceObject2Tag",
+          "characterId": 154,
+          "depth": 12,
+          "name": "mcGameoverLogo",
+          "ratio": 7,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            160.0
+          ],
+          "colorTransform": {
+            "alphaMultTerm": "0",
+            "blueMultTerm": "256",
+            "greenMultTerm": "256",
+            "hasAddTerms": "false",
+            "hasMultTerms": "true",
+            "redMultTerm": "256"
+          },
+          "move": false
+        },
+        {
+          "frame": 9,
+          "type": "PlaceObject2Tag",
+          "depth": 12,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            163.3
+          ],
+          "colorTransform": {
+            "alphaMultTerm": "12",
+            "blueMultTerm": "256",
+            "greenMultTerm": "256",
+            "hasAddTerms": "false",
+            "hasMultTerms": "true",
+            "redMultTerm": "256"
+          },
+          "move": true
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "depth": 12,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            166.5
+          ],
+          "colorTransform": {
+            "alphaMultTerm": "24",
+            "blueMultTerm": "256",
+            "greenMultTerm": "256",
+            "hasAddTerms": "false",
+            "hasMultTerms": "true",
+            "redMultTerm": "256"
+          },
+          "move": true
+        },
+        {
+          "frame": 11,
+          "type": "PlaceObject2Tag",
+          "depth": 12,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            169.65
+          ],
+          "colorTransform": {
+            "alphaMultTerm": "35",
+            "blueMultTerm": "256",
+            "greenMultTerm": "256",
+            "hasAddTerms": "false",
+            "hasMultTerms": "true",
+            "redMultTerm": "256"
+          },
+          "move": true
+        },
+        {
+          "frame": 12,
+          "type": "PlaceObject2Tag",
+          "depth": 12,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            172.7
+          ],
+          "colorTransform": {
+            "alphaMultTerm": "46",
+            "blueMultTerm": "256",
+            "greenMultTerm": "256",
+            "hasAddTerms": "false",
+            "hasMultTerms": "true",
+            "redMultTerm": "256"
+          },
+          "move": true
+        },
+        {
+          "frame": 13,
+          "type": "PlaceObject2Tag",
+          "depth": 12,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            175.65
+          ],
+          "colorTransform": {
+            "alphaMultTerm": "57",
+            "blueMultTerm": "256",
+            "greenMultTerm": "256",
+            "hasAddTerms": "false",
+            "hasMultTerms": "true",
+            "redMultTerm": "256"
+          },
+          "move": true
+        },
+        {
+          "frame": 14,
+          "type": "PlaceObject2Tag",
+          "depth": 12,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            178.55
+          ],
+          "colorTransform": {
+            "alphaMultTerm": "68",
+            "blueMultTerm": "256",
+            "greenMultTerm": "256",
+            "hasAddTerms": "false",
+            "hasMultTerms": "true",
+            "redMultTerm": "256"
+          },
+          "move": true
+        },
+        {
+          "frame": 15,
+          "type": "PlaceObject2Tag",
+          "depth": 12,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            181.4
+          ],
+          "colorTransform": {
+            "alphaMultTerm": "78",
+            "blueMultTerm": "256",
+            "greenMultTerm": "256",
+            "hasAddTerms": "false",
+            "hasMultTerms": "true",
+            "redMultTerm": "256"
+          },
+          "move": true
+        },
+        {
+          "frame": 16,
+          "type": "PlaceObject2Tag",
+          "depth": 12,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            184.15
+          ],
+          "colorTransform": {
+            "alphaMultTerm": "88",
+            "blueMultTerm": "256",
+            "greenMultTerm": "256",
+            "hasAddTerms": "false",
+            "hasMultTerms": "true",
+            "redMultTerm": "256"
+          },
+          "move": true
+        },
+        {
+          "frame": 17,
+          "type": "PlaceObject2Tag",
+          "depth": 12,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            186.8
+          ],
+          "colorTransform": {
+            "alphaMultTerm": "98",
+            "blueMultTerm": "256",
+            "greenMultTerm": "256",
+            "hasAddTerms": "false",
+            "hasMultTerms": "true",
+            "redMultTerm": "256"
+          },
+          "move": true
+        },
+        {
+          "frame": 18,
+          "type": "PlaceObject2Tag",
+          "depth": 12,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            189.35
+          ],
+          "colorTransform": {
+            "alphaMultTerm": "107",
+            "blueMultTerm": "256",
+            "greenMultTerm": "256",
+            "hasAddTerms": "false",
+            "hasMultTerms": "true",
+            "redMultTerm": "256"
+          },
+          "move": true
+        },
+        {
+          "frame": 19,
+          "type": "PlaceObject2Tag",
+          "depth": 12,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            191.85
+          ],
+          "colorTransform": {
+            "alphaMultTerm": "117",
+            "blueMultTerm": "256",
+            "greenMultTerm": "256",
+            "hasAddTerms": "false",
+            "hasMultTerms": "true",
+            "redMultTerm": "256"
+          },
+          "move": true
+        },
+        {
+          "frame": 20,
+          "type": "PlaceObject2Tag",
+          "depth": 12,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            194.3
+          ],
+          "colorTransform": {
+            "alphaMultTerm": "125",
+            "blueMultTerm": "256",
+            "greenMultTerm": "256",
+            "hasAddTerms": "false",
+            "hasMultTerms": "true",
+            "redMultTerm": "256"
+          },
+          "move": true
+        },
+        {
+          "frame": 21,
+          "type": "PlaceObject2Tag",
+          "depth": 12,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            196.65
+          ],
+          "colorTransform": {
+            "alphaMultTerm": "134",
+            "blueMultTerm": "256",
+            "greenMultTerm": "256",
+            "hasAddTerms": "false",
+            "hasMultTerms": "true",
+            "redMultTerm": "256"
+          },
+          "move": true
+        },
+        {
+          "frame": 22,
+          "type": "PlaceObject2Tag",
+          "depth": 12,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            198.9
+          ],
+          "colorTransform": {
+            "alphaMultTerm": "142",
+            "blueMultTerm": "256",
+            "greenMultTerm": "256",
+            "hasAddTerms": "false",
+            "hasMultTerms": "true",
+            "redMultTerm": "256"
+          },
+          "move": true
+        },
+        {
+          "frame": 23,
+          "type": "PlaceObject2Tag",
+          "depth": 12,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            201.05
+          ],
+          "colorTransform": {
+            "alphaMultTerm": "150",
+            "blueMultTerm": "256",
+            "greenMultTerm": "256",
+            "hasAddTerms": "false",
+            "hasMultTerms": "true",
+            "redMultTerm": "256"
+          },
+          "move": true
+        },
+        {
+          "frame": 24,
+          "type": "PlaceObject2Tag",
+          "depth": 12,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            203.15
+          ],
+          "colorTransform": {
+            "alphaMultTerm": "158",
+            "blueMultTerm": "256",
+            "greenMultTerm": "256",
+            "hasAddTerms": "false",
+            "hasMultTerms": "true",
+            "redMultTerm": "256"
+          },
+          "move": true
+        },
+        {
+          "frame": 25,
+          "type": "PlaceObject2Tag",
+          "depth": 12,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            205.2
+          ],
+          "colorTransform": {
+            "alphaMultTerm": "165",
+            "blueMultTerm": "256",
+            "greenMultTerm": "256",
+            "hasAddTerms": "false",
+            "hasMultTerms": "true",
+            "redMultTerm": "256"
+          },
+          "move": true
+        },
+        {
+          "frame": 26,
+          "type": "PlaceObject2Tag",
+          "depth": 12,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            207.15
+          ],
+          "colorTransform": {
+            "alphaMultTerm": "172",
+            "blueMultTerm": "256",
+            "greenMultTerm": "256",
+            "hasAddTerms": "false",
+            "hasMultTerms": "true",
+            "redMultTerm": "256"
+          },
+          "move": true
+        },
+        {
+          "frame": 27,
+          "type": "PlaceObject2Tag",
+          "depth": 12,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            209.0
+          ],
+          "colorTransform": {
+            "alphaMultTerm": "179",
+            "blueMultTerm": "256",
+            "greenMultTerm": "256",
+            "hasAddTerms": "false",
+            "hasMultTerms": "true",
+            "redMultTerm": "256"
+          },
+          "move": true
+        },
+        {
+          "frame": 28,
+          "type": "PlaceObject2Tag",
+          "depth": 12,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            210.8
+          ],
+          "colorTransform": {
+            "alphaMultTerm": "186",
+            "blueMultTerm": "256",
+            "greenMultTerm": "256",
+            "hasAddTerms": "false",
+            "hasMultTerms": "true",
+            "redMultTerm": "256"
+          },
+          "move": true
+        },
+        {
+          "frame": 29,
+          "type": "PlaceObject2Tag",
+          "depth": 12,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            212.5
+          ],
+          "colorTransform": {
+            "alphaMultTerm": "192",
+            "blueMultTerm": "256",
+            "greenMultTerm": "256",
+            "hasAddTerms": "false",
+            "hasMultTerms": "true",
+            "redMultTerm": "256"
+          },
+          "move": true
+        },
+        {
+          "frame": 30,
+          "type": "PlaceObject2Tag",
+          "depth": 12,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            214.15
+          ],
+          "colorTransform": {
+            "alphaMultTerm": "198",
+            "blueMultTerm": "256",
+            "greenMultTerm": "256",
+            "hasAddTerms": "false",
+            "hasMultTerms": "true",
+            "redMultTerm": "256"
+          },
+          "move": true
+        },
+        {
+          "frame": 31,
+          "type": "PlaceObject2Tag",
+          "depth": 12,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            215.65
+          ],
+          "colorTransform": {
+            "alphaMultTerm": "204",
+            "blueMultTerm": "256",
+            "greenMultTerm": "256",
+            "hasAddTerms": "false",
+            "hasMultTerms": "true",
+            "redMultTerm": "256"
+          },
+          "move": true
+        },
+        {
+          "frame": 32,
+          "type": "PlaceObject2Tag",
+          "depth": 12,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            217.15
+          ],
+          "colorTransform": {
+            "alphaMultTerm": "209",
+            "blueMultTerm": "256",
+            "greenMultTerm": "256",
+            "hasAddTerms": "false",
+            "hasMultTerms": "true",
+            "redMultTerm": "256"
+          },
+          "move": true
+        },
+        {
+          "frame": 33,
+          "type": "PlaceObject2Tag",
+          "depth": 12,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            218.55
+          ],
+          "colorTransform": {
+            "alphaMultTerm": "214",
+            "blueMultTerm": "256",
+            "greenMultTerm": "256",
+            "hasAddTerms": "false",
+            "hasMultTerms": "true",
+            "redMultTerm": "256"
+          },
+          "move": true
+        },
+        {
+          "frame": 34,
+          "type": "PlaceObject2Tag",
+          "depth": 12,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            219.85
+          ],
+          "colorTransform": {
+            "alphaMultTerm": "219",
+            "blueMultTerm": "256",
+            "greenMultTerm": "256",
+            "hasAddTerms": "false",
+            "hasMultTerms": "true",
+            "redMultTerm": "256"
+          },
+          "move": true
+        },
+        {
+          "frame": 35,
+          "type": "PlaceObject2Tag",
+          "depth": 12,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            221.05
+          ],
+          "colorTransform": {
+            "alphaMultTerm": "223",
+            "blueMultTerm": "256",
+            "greenMultTerm": "256",
+            "hasAddTerms": "false",
+            "hasMultTerms": "true",
+            "redMultTerm": "256"
+          },
+          "move": true
+        },
+        {
+          "frame": 36,
+          "type": "PlaceObject2Tag",
+          "depth": 12,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            222.2
+          ],
+          "colorTransform": {
+            "alphaMultTerm": "228",
+            "blueMultTerm": "256",
+            "greenMultTerm": "256",
+            "hasAddTerms": "false",
+            "hasMultTerms": "true",
+            "redMultTerm": "256"
+          },
+          "move": true
+        },
+        {
+          "frame": 37,
+          "type": "PlaceObject2Tag",
+          "depth": 12,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            223.3
+          ],
+          "colorTransform": {
+            "alphaMultTerm": "231",
+            "blueMultTerm": "256",
+            "greenMultTerm": "256",
+            "hasAddTerms": "false",
+            "hasMultTerms": "true",
+            "redMultTerm": "256"
+          },
+          "move": true
+        },
+        {
+          "frame": 38,
+          "type": "PlaceObject2Tag",
+          "depth": 12,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            224.3
+          ],
+          "colorTransform": {
+            "alphaMultTerm": "235",
+            "blueMultTerm": "256",
+            "greenMultTerm": "256",
+            "hasAddTerms": "false",
+            "hasMultTerms": "true",
+            "redMultTerm": "256"
+          },
+          "move": true
+        },
+        {
+          "frame": 39,
+          "type": "PlaceObject2Tag",
+          "depth": 12,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            225.2
+          ],
+          "colorTransform": {
+            "alphaMultTerm": "238",
+            "blueMultTerm": "256",
+            "greenMultTerm": "256",
+            "hasAddTerms": "false",
+            "hasMultTerms": "true",
+            "redMultTerm": "256"
+          },
+          "move": true
+        },
+        {
+          "frame": 40,
+          "type": "PlaceObject2Tag",
+          "depth": 12,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            226.05
+          ],
+          "colorTransform": {
+            "alphaMultTerm": "241",
+            "blueMultTerm": "256",
+            "greenMultTerm": "256",
+            "hasAddTerms": "false",
+            "hasMultTerms": "true",
+            "redMultTerm": "256"
+          },
+          "move": true
+        },
+        {
+          "frame": 41,
+          "type": "PlaceObject2Tag",
+          "depth": 12,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            226.8
+          ],
+          "colorTransform": {
+            "alphaMultTerm": "244",
+            "blueMultTerm": "256",
+            "greenMultTerm": "256",
+            "hasAddTerms": "false",
+            "hasMultTerms": "true",
+            "redMultTerm": "256"
+          },
+          "move": true
+        },
+        {
+          "frame": 42,
+          "type": "PlaceObject2Tag",
+          "depth": 12,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            227.45
+          ],
+          "colorTransform": {
+            "alphaMultTerm": "247",
+            "blueMultTerm": "256",
+            "greenMultTerm": "256",
+            "hasAddTerms": "false",
+            "hasMultTerms": "true",
+            "redMultTerm": "256"
+          },
+          "move": true
+        },
+        {
+          "frame": 43,
+          "type": "PlaceObject2Tag",
+          "depth": 12,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            228.05
+          ],
+          "colorTransform": {
+            "alphaMultTerm": "249",
+            "blueMultTerm": "256",
+            "greenMultTerm": "256",
+            "hasAddTerms": "false",
+            "hasMultTerms": "true",
+            "redMultTerm": "256"
+          },
+          "move": true
+        },
+        {
+          "frame": 44,
+          "type": "PlaceObject2Tag",
+          "depth": 12,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            228.55
+          ],
+          "colorTransform": {
+            "alphaMultTerm": "251",
+            "blueMultTerm": "256",
+            "greenMultTerm": "256",
+            "hasAddTerms": "false",
+            "hasMultTerms": "true",
+            "redMultTerm": "256"
+          },
+          "move": true
+        },
+        {
+          "frame": 45,
+          "type": "PlaceObject2Tag",
+          "depth": 12,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            229.0
+          ],
+          "colorTransform": {
+            "alphaMultTerm": "252",
+            "blueMultTerm": "256",
+            "greenMultTerm": "256",
+            "hasAddTerms": "false",
+            "hasMultTerms": "true",
+            "redMultTerm": "256"
+          },
+          "move": true
+        },
+        {
+          "frame": 46,
+          "type": "PlaceObject2Tag",
+          "depth": 12,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            229.35
+          ],
+          "colorTransform": {
+            "alphaMultTerm": "254",
+            "blueMultTerm": "256",
+            "greenMultTerm": "256",
+            "hasAddTerms": "false",
+            "hasMultTerms": "true",
+            "redMultTerm": "256"
+          },
+          "move": true
+        },
+        {
+          "frame": 47,
+          "type": "PlaceObject2Tag",
+          "depth": 12,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            229.65
+          ],
+          "colorTransform": {
+            "alphaMultTerm": "255",
+            "blueMultTerm": "256",
+            "greenMultTerm": "256",
+            "hasAddTerms": "false",
+            "hasMultTerms": "true",
+            "redMultTerm": "256"
+          },
+          "move": true
+        },
+        {
+          "frame": 48,
+          "type": "PlaceObject2Tag",
+          "depth": 12,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            229.85
+          ],
+          "move": true
+        },
+        {
+          "frame": 49,
+          "type": "PlaceObject2Tag",
+          "depth": 12,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            229.95
+          ],
+          "colorTransform": {
+            "hasAddTerms": "false",
+            "hasMultTerms": "false"
+          },
+          "move": true
+        },
+        {
+          "frame": 50,
+          "type": "DoActionTag",
+          "actionSha256": "73e8a79e55f5b068c7bc5c09b8fdd4d6d303a7b21fb1ed960ae387d2519cca28"
+        },
+        {
+          "frame": 50,
+          "type": "PlaceObject2Tag",
+          "characterId": 155,
+          "depth": 2,
+          "ratio": 49,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            262.0,
+            365.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 50,
+          "type": "PlaceObject2Tag",
+          "characterId": 156,
+          "depth": 6,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            266.0,
+            368.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 50,
+          "type": "PlaceObject2Tag",
+          "characterId": 157,
+          "depth": 7,
+          "ratio": 49,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            420.0,
+            365.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 50,
+          "type": "PlaceObject2Tag",
+          "characterId": 158,
+          "depth": 11,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            424.1,
+            367.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 50,
+          "type": "PlaceObject2Tag",
+          "depth": 12,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            230.0
+          ],
+          "move": true
+        }
+      ]
+    },
+    "162": {
+      "frameCount": 1,
+      "records": [
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 161,
+          "depth": 4,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "move": false
+        }
+      ]
+    },
+    "163": {
+      "frameCount": 42,
+      "records": [
+        {
+          "frame": 10,
+          "type": "StartSoundTag",
+          "soundId": 160
+        },
+        {
+          "frame": 11,
+          "type": "DoActionTag",
+          "actionSha256": "841a940152d79e0cd44ea3a45e12d65fed6cb245a2d564cef886683a2ce2ae2e"
+        },
+        {
+          "frame": 11,
+          "type": "PlaceObject2Tag",
+          "characterId": 162,
+          "depth": 1,
+          "name": "mcWinlogo",
+          "ratio": 10,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            134.75,
+            189.75
+          ],
+          "move": false
+        },
+        {
+          "frame": 13,
+          "type": "DoActionTag",
+          "actionSha256": "134f3e22c45d91912f17af61c373c8eb963616bbd6a36d541eac6b6a9ec64f16"
+        },
+        {
+          "frame": 14,
+          "type": "DoActionTag",
+          "actionSha256": "841a940152d79e0cd44ea3a45e12d65fed6cb245a2d564cef886683a2ce2ae2e"
+        },
+        {
+          "frame": 16,
+          "type": "DoActionTag",
+          "actionSha256": "134f3e22c45d91912f17af61c373c8eb963616bbd6a36d541eac6b6a9ec64f16"
+        },
+        {
+          "frame": 17,
+          "type": "DoActionTag",
+          "actionSha256": "841a940152d79e0cd44ea3a45e12d65fed6cb245a2d564cef886683a2ce2ae2e"
+        },
+        {
+          "frame": 19,
+          "type": "DoActionTag",
+          "actionSha256": "134f3e22c45d91912f17af61c373c8eb963616bbd6a36d541eac6b6a9ec64f16"
+        },
+        {
+          "frame": 20,
+          "type": "DoActionTag",
+          "actionSha256": "841a940152d79e0cd44ea3a45e12d65fed6cb245a2d564cef886683a2ce2ae2e"
+        },
+        {
+          "frame": 40,
+          "type": "DoActionTag",
+          "actionSha256": "73e8a79e55f5b068c7bc5c09b8fdd4d6d303a7b21fb1ed960ae387d2519cca28"
+        },
+        {
+          "frame": 40,
+          "type": "PlaceObject2Tag",
+          "characterId": 157,
+          "depth": 6,
+          "ratio": 39,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            337.0,
+            332.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 40,
+          "type": "PlaceObject2Tag",
+          "characterId": 158,
+          "depth": 10,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            340.7,
+            334.0
+          ],
+          "move": false
+        }
+      ]
+    },
+    "169": {
+      "frameCount": 24,
+      "records": [
+        {
+          "frame": 1,
+          "type": "DoActionTag",
+          "actionSha256": "4f5500847080e6025b9750540b7e38322362c68368f4d8d7f9c10312b62c29fa"
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 164,
+          "depth": 1,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1032.25,
+            32.35
+          ],
+          "move": false
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 168,
+          "depth": 2,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            7.0,
+            501.1
+          ],
+          "move": false
+        },
+        {
+          "frame": 5,
+          "type": "FrameLabelTag",
+          "name": "battle"
+        },
+        {
+          "frame": 5,
+          "type": "DoActionTag",
+          "actionSha256": "20bbc174e6b2e7d446ab9bda05bbfa07235cae3238b014307ae278ec1eb7d9c1"
+        },
+        {
+          "frame": 7,
+          "type": "DoActionTag",
+          "actionSha256": "35865602784152e93048a79266fd25a030f2ed3db9b8b20aecf0492b28facddd"
+        },
+        {
+          "frame": 12,
+          "type": "DoActionTag",
+          "actionSha256": "f855d077c0902bae4e0850d5229dad4f020253c6b66c86bceccac2761c7c49e7"
+        },
+        {
+          "frame": 14,
+          "type": "DoActionTag",
+          "actionSha256": "1218364137ad399b0dcc2b49d7e23121d345370e31be9916cd3efd58c97ed444"
+        },
+        {
+          "frame": 15,
+          "type": "FrameLabelTag",
+          "name": "supply"
+        },
+        {
+          "frame": 15,
+          "type": "DoActionTag",
+          "actionSha256": "38fcaba7f1fb99c2b5d6f75e8516d31c595c4e8833d6496d501c5c665aafea24"
+        },
+        {
+          "frame": 16,
+          "type": "DoActionTag",
+          "actionSha256": "1218364137ad399b0dcc2b49d7e23121d345370e31be9916cd3efd58c97ed444"
+        },
+        {
+          "frame": 20,
+          "type": "FrameLabelTag",
+          "name": "end"
+        },
+        {
+          "frame": 20,
+          "type": "DoActionTag",
+          "actionSha256": "1295181900c6822021ac43def419418a57a2091f2779f55e5cef8bd3493b0604"
+        }
+      ]
+    },
+    "170": {
+      "frameCount": 76,
+      "records": [
+        {
+          "frame": 1,
+          "type": "FrameLabelTag",
+          "name": "init"
+        },
+        {
+          "frame": 1,
+          "type": "DoActionTag",
+          "actionSha256": "dace4fe337a956a98773d22b0a22910eaa86b68013fcf26b1cb7e3a5e47eb6ca"
+        },
+        {
+          "frame": 1,
+          "type": "PlaceObject2Tag",
+          "characterId": 12,
+          "depth": 1,
+          "matrix": [
+            44.444443,
+            0.0,
+            0.0,
+            33.33333,
+            13200.0,
+            5700.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 2,
+          "type": "RemoveObject2Tag",
+          "depth": 1
+        },
+        {
+          "frame": 2,
+          "type": "DoActionTag",
+          "actionSha256": "2e74fd579998d68e30c8d30dedb33c35b05a27c701b11a4827e9be096885b2fb"
+        },
+        {
+          "frame": 3,
+          "type": "DoActionTag",
+          "actionSha256": "28749d42cacc54fba7b084d73327a4c3a8da6d911a7153f2d53332ed45573e38"
+        },
+        {
+          "frame": 5,
+          "type": "FrameLabelTag",
+          "name": "title"
+        },
+        {
+          "frame": 5,
+          "type": "DoActionTag",
+          "actionSha256": "d21ef44aa9f9817231f585b2caa36d2ab412a1be1f2abef9ad42f889c4a63a78"
+        },
+        {
+          "frame": 5,
+          "type": "PlaceObject2Tag",
+          "characterId": 54,
+          "depth": 1,
+          "ratio": 4,
+          "matrix": [
+            1.0001373,
+            0.0,
+            0.0,
+            1.0006561,
+            0.0,
+            -20.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "RemoveObject2Tag",
+          "depth": 1
+        },
+        {
+          "frame": 10,
+          "type": "FrameLabelTag",
+          "name": "map"
+        },
+        {
+          "frame": 10,
+          "type": "DoActionTag",
+          "actionSha256": "bcb0de34e316ad1dad0cc59175bf7466a22fe86123abde81cdb913751221f828"
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 12,
+          "depth": 1,
+          "matrix": [
+            44.44722,
+            0.0,
+            0.0,
+            6.6666718,
+            13200.8,
+            1620.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 55,
+          "depth": 2,
+          "name": "mcArea0",
+          "ratio": 9,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            305.8,
+            -108.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 55,
+          "depth": 4,
+          "name": "mcArea1",
+          "ratio": 9,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            329.5,
+            -108.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 55,
+          "depth": 6,
+          "name": "mcArea2",
+          "ratio": 9,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            353.2,
+            -108.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 55,
+          "depth": 8,
+          "name": "mcArea3",
+          "ratio": 9,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            376.9,
+            -108.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 55,
+          "depth": 10,
+          "name": "mcArea4",
+          "ratio": 9,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            400.6,
+            -108.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 55,
+          "depth": 12,
+          "name": "mcArea5",
+          "ratio": 9,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            424.3,
+            -108.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 55,
+          "depth": 14,
+          "name": "mcArea6",
+          "ratio": 9,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            448.0,
+            -108.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 55,
+          "depth": 16,
+          "name": "mcArea7",
+          "ratio": 9,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            471.7,
+            -108.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 55,
+          "depth": 18,
+          "name": "mcArea8",
+          "ratio": 9,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            305.8,
+            -83.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 55,
+          "depth": 20,
+          "name": "mcArea9",
+          "ratio": 9,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            329.5,
+            -83.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 55,
+          "depth": 22,
+          "name": "mcArea10",
+          "ratio": 9,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            353.2,
+            -83.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 55,
+          "depth": 24,
+          "name": "mcArea11",
+          "ratio": 9,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            376.9,
+            -83.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 55,
+          "depth": 26,
+          "name": "mcArea12",
+          "ratio": 9,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            400.6,
+            -83.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 55,
+          "depth": 28,
+          "name": "mcArea13",
+          "ratio": 9,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            424.3,
+            -83.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 55,
+          "depth": 30,
+          "name": "mcArea14",
+          "ratio": 9,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            448.0,
+            -83.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 55,
+          "depth": 32,
+          "name": "mcArea15",
+          "ratio": 9,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            471.7,
+            -83.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 55,
+          "depth": 34,
+          "name": "mcArea16",
+          "ratio": 9,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            305.8,
+            -58.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 55,
+          "depth": 36,
+          "name": "mcArea17",
+          "ratio": 9,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            329.5,
+            -58.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 55,
+          "depth": 38,
+          "name": "mcArea18",
+          "ratio": 9,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            353.2,
+            -58.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 55,
+          "depth": 40,
+          "name": "mcArea19",
+          "ratio": 9,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            376.9,
+            -58.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 55,
+          "depth": 42,
+          "name": "mcArea20",
+          "ratio": 9,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            400.6,
+            -58.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 55,
+          "depth": 44,
+          "name": "mcArea21",
+          "ratio": 9,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            424.3,
+            -58.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 55,
+          "depth": 46,
+          "name": "mcArea22",
+          "ratio": 9,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            448.0,
+            -58.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 55,
+          "depth": 48,
+          "name": "mcArea23",
+          "ratio": 9,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            471.7,
+            -58.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 55,
+          "depth": 50,
+          "name": "mcArea24",
+          "ratio": 9,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            305.8,
+            -33.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 55,
+          "depth": 52,
+          "name": "mcArea25",
+          "ratio": 9,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            329.5,
+            -33.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 55,
+          "depth": 54,
+          "name": "mcArea26",
+          "ratio": 9,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            353.2,
+            -33.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 55,
+          "depth": 56,
+          "name": "mcArea27",
+          "ratio": 9,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            376.9,
+            -33.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 55,
+          "depth": 58,
+          "name": "mcArea28",
+          "ratio": 9,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            400.6,
+            -33.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 55,
+          "depth": 60,
+          "name": "mcArea29",
+          "ratio": 9,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            424.3,
+            -33.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 55,
+          "depth": 62,
+          "name": "mcArea30",
+          "ratio": 9,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            448.0,
+            -33.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 55,
+          "depth": 64,
+          "name": "mcArea31",
+          "ratio": 9,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            471.7,
+            -33.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 124,
+          "depth": 66,
+          "name": "mcAreaDice0",
+          "ratio": 9,
+          "matrix": [
+            0.80233765,
+            0.0,
+            0.0,
+            0.80233765,
+            232.55,
+            -277.3
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 124,
+          "depth": 90,
+          "name": "mcAreaDice1",
+          "ratio": 9,
+          "matrix": [
+            0.80233765,
+            0.0,
+            0.0,
+            0.80233765,
+            266.2,
+            -277.3
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 124,
+          "depth": 114,
+          "name": "mcAreaDice2",
+          "ratio": 9,
+          "matrix": [
+            0.80233765,
+            0.0,
+            0.0,
+            0.80233765,
+            299.85,
+            -277.3
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 124,
+          "depth": 138,
+          "name": "mcAreaDice3",
+          "ratio": 9,
+          "matrix": [
+            0.80233765,
+            0.0,
+            0.0,
+            0.80233765,
+            333.5,
+            -277.3
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 124,
+          "depth": 162,
+          "name": "mcAreaDice4",
+          "ratio": 9,
+          "matrix": [
+            0.80233765,
+            0.0,
+            0.0,
+            0.80233765,
+            367.15,
+            -277.3
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 124,
+          "depth": 186,
+          "name": "mcAreaDice5",
+          "ratio": 9,
+          "matrix": [
+            0.80233765,
+            0.0,
+            0.0,
+            0.80233765,
+            400.8,
+            -277.3
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 124,
+          "depth": 210,
+          "name": "mcAreaDice6",
+          "ratio": 9,
+          "matrix": [
+            0.80233765,
+            0.0,
+            0.0,
+            0.80233765,
+            434.45,
+            -277.3
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 124,
+          "depth": 234,
+          "name": "mcAreaDice7",
+          "ratio": 9,
+          "matrix": [
+            0.80233765,
+            0.0,
+            0.0,
+            0.80233765,
+            468.1,
+            -277.3
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 124,
+          "depth": 258,
+          "name": "mcAreaDice8",
+          "ratio": 9,
+          "matrix": [
+            0.80233765,
+            0.0,
+            0.0,
+            0.80233765,
+            231.75,
+            -250.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 124,
+          "depth": 282,
+          "name": "mcAreaDice9",
+          "ratio": 9,
+          "matrix": [
+            0.80233765,
+            0.0,
+            0.0,
+            0.80233765,
+            265.4,
+            -250.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 124,
+          "depth": 306,
+          "name": "mcAreaDice10",
+          "ratio": 9,
+          "matrix": [
+            0.80233765,
+            0.0,
+            0.0,
+            0.80233765,
+            299.05,
+            -250.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 124,
+          "depth": 330,
+          "name": "mcAreaDice11",
+          "ratio": 9,
+          "matrix": [
+            0.80233765,
+            0.0,
+            0.0,
+            0.80233765,
+            332.65,
+            -250.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 124,
+          "depth": 354,
+          "name": "mcAreaDice12",
+          "ratio": 9,
+          "matrix": [
+            0.80233765,
+            0.0,
+            0.0,
+            0.80233765,
+            366.35,
+            -250.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 124,
+          "depth": 378,
+          "name": "mcAreaDice13",
+          "ratio": 9,
+          "matrix": [
+            0.80233765,
+            0.0,
+            0.0,
+            0.80233765,
+            400.0,
+            -250.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 124,
+          "depth": 402,
+          "name": "mcAreaDice14",
+          "ratio": 9,
+          "matrix": [
+            0.80233765,
+            0.0,
+            0.0,
+            0.80233765,
+            433.65,
+            -250.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 124,
+          "depth": 426,
+          "name": "mcAreaDice15",
+          "ratio": 9,
+          "matrix": [
+            0.80233765,
+            0.0,
+            0.0,
+            0.80233765,
+            467.3,
+            -250.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 124,
+          "depth": 450,
+          "name": "mcAreaDice16",
+          "ratio": 9,
+          "matrix": [
+            0.80233765,
+            0.0,
+            0.0,
+            0.80233765,
+            230.1,
+            -222.75
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 124,
+          "depth": 474,
+          "name": "mcAreaDice17",
+          "ratio": 9,
+          "matrix": [
+            0.80233765,
+            0.0,
+            0.0,
+            0.80233765,
+            263.75,
+            -222.75
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 124,
+          "depth": 498,
+          "name": "mcAreaDice18",
+          "ratio": 9,
+          "matrix": [
+            0.80233765,
+            0.0,
+            0.0,
+            0.80233765,
+            297.4,
+            -222.75
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 124,
+          "depth": 522,
+          "name": "mcAreaDice19",
+          "ratio": 9,
+          "matrix": [
+            0.80233765,
+            0.0,
+            0.0,
+            0.80233765,
+            331.05,
+            -222.75
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 124,
+          "depth": 546,
+          "name": "mcAreaDice20",
+          "ratio": 9,
+          "matrix": [
+            0.80233765,
+            0.0,
+            0.0,
+            0.80233765,
+            364.75,
+            -222.75
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 124,
+          "depth": 570,
+          "name": "mcAreaDice21",
+          "ratio": 9,
+          "matrix": [
+            0.80233765,
+            0.0,
+            0.0,
+            0.80233765,
+            398.4,
+            -222.75
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 124,
+          "depth": 594,
+          "name": "mcAreaDice22",
+          "ratio": 9,
+          "matrix": [
+            0.80233765,
+            0.0,
+            0.0,
+            0.80233765,
+            432.05,
+            -222.75
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 124,
+          "depth": 618,
+          "name": "mcAreaDice23",
+          "ratio": 9,
+          "matrix": [
+            0.80233765,
+            0.0,
+            0.0,
+            0.80233765,
+            465.7,
+            -222.75
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 124,
+          "depth": 642,
+          "name": "mcAreaDice24",
+          "ratio": 9,
+          "matrix": [
+            0.80233765,
+            0.0,
+            0.0,
+            0.80233765,
+            229.3,
+            -195.5
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 124,
+          "depth": 666,
+          "name": "mcAreaDice25",
+          "ratio": 9,
+          "matrix": [
+            0.80233765,
+            0.0,
+            0.0,
+            0.80233765,
+            262.95,
+            -195.5
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 124,
+          "depth": 690,
+          "name": "mcAreaDice26",
+          "ratio": 9,
+          "matrix": [
+            0.80233765,
+            0.0,
+            0.0,
+            0.80233765,
+            296.6,
+            -195.5
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 124,
+          "depth": 714,
+          "name": "mcAreaDice27",
+          "ratio": 9,
+          "matrix": [
+            0.80233765,
+            0.0,
+            0.0,
+            0.80233765,
+            330.3,
+            -195.5
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 124,
+          "depth": 738,
+          "name": "mcAreaDice28",
+          "ratio": 9,
+          "matrix": [
+            0.80233765,
+            0.0,
+            0.0,
+            0.80233765,
+            363.95,
+            -195.5
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 124,
+          "depth": 762,
+          "name": "mcAreaDice29",
+          "ratio": 9,
+          "matrix": [
+            0.80233765,
+            0.0,
+            0.0,
+            0.80233765,
+            397.6,
+            -195.5
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 124,
+          "depth": 786,
+          "name": "mcAreaDice30",
+          "ratio": 9,
+          "matrix": [
+            0.80233765,
+            0.0,
+            0.0,
+            0.80233765,
+            431.25,
+            -195.5
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 124,
+          "depth": 810,
+          "name": "mcAreaDice31",
+          "ratio": 9,
+          "matrix": [
+            0.80233765,
+            0.0,
+            0.0,
+            0.80233765,
+            464.9,
+            -195.5
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 134,
+          "depth": 834,
+          "name": "mcMapmake",
+          "ratio": 9,
+          "matrix": [
+            1.0001678,
+            0.0,
+            0.0,
+            1.0024414,
+            0.0,
+            0.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 10,
+          "type": "PlaceObject2Tag",
+          "characterId": 137,
+          "depth": 1084,
+          "ratio": 9,
+          "matrix": [
+            1.0009155,
+            0.0,
+            0.0,
+            1.0,
+            770.0,
+            10.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 15,
+          "type": "RemoveObject2Tag",
+          "depth": 834
+        },
+        {
+          "frame": 15,
+          "type": "FrameLabelTag",
+          "name": "start_player"
+        },
+        {
+          "frame": 15,
+          "type": "DoActionTag",
+          "actionSha256": "4f336d75e5a37986c98705b96fc5026ad4fde70df8abb5a2ef696e1e79856851"
+        },
+        {
+          "frame": 15,
+          "type": "PlaceObject2Tag",
+          "characterId": 141,
+          "depth": 834,
+          "name": "mcPlayer0",
+          "ratio": 14,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            84.85,
+            558.3
+          ],
+          "move": false
+        },
+        {
+          "frame": 15,
+          "type": "PlaceObject2Tag",
+          "characterId": 141,
+          "depth": 841,
+          "name": "mcPlayer1",
+          "ratio": 14,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            175.6,
+            558.3
+          ],
+          "move": false
+        },
+        {
+          "frame": 15,
+          "type": "PlaceObject2Tag",
+          "characterId": 141,
+          "depth": 848,
+          "name": "mcPlayer2",
+          "ratio": 14,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            266.35,
+            558.3
+          ],
+          "move": false
+        },
+        {
+          "frame": 15,
+          "type": "PlaceObject2Tag",
+          "characterId": 141,
+          "depth": 855,
+          "name": "mcPlayer3",
+          "ratio": 14,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            357.1,
+            558.3
+          ],
+          "move": false
+        },
+        {
+          "frame": 15,
+          "type": "PlaceObject2Tag",
+          "characterId": 141,
+          "depth": 862,
+          "name": "mcPlayer4",
+          "ratio": 14,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            447.85,
+            558.3
+          ],
+          "move": false
+        },
+        {
+          "frame": 15,
+          "type": "PlaceObject2Tag",
+          "characterId": 141,
+          "depth": 869,
+          "name": "mcPlayer5",
+          "ratio": 14,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            538.6,
+            558.3
+          ],
+          "move": false
+        },
+        {
+          "frame": 15,
+          "type": "PlaceObject2Tag",
+          "characterId": 141,
+          "depth": 876,
+          "name": "mcPlayer6",
+          "ratio": 14,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            629.35,
+            558.3
+          ],
+          "move": false
+        },
+        {
+          "frame": 15,
+          "type": "PlaceObject2Tag",
+          "characterId": 141,
+          "depth": 883,
+          "name": "mcPlayer7",
+          "ratio": 14,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            720.1,
+            558.3
+          ],
+          "move": false
+        },
+        {
+          "frame": 21,
+          "type": "FrameLabelTag",
+          "name": "man"
+        },
+        {
+          "frame": 21,
+          "type": "DoActionTag",
+          "actionSha256": "a0ce43a658a8b97b831be0039e5b7b3ed4735dc28bf8c88789acab62f1f973aa"
+        },
+        {
+          "frame": 21,
+          "type": "PlaceObject2Tag",
+          "characterId": 142,
+          "depth": 890,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            76.2,
+            494.15
+          ],
+          "move": false
+        },
+        {
+          "frame": 21,
+          "type": "PlaceObject2Tag",
+          "characterId": 130,
+          "depth": 891,
+          "name": "btEndTurn",
+          "ratio": 20,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            629.0,
+            492.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 21,
+          "type": "PlaceObject2Tag",
+          "characterId": 143,
+          "depth": 895,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            648.0,
+            494.65
+          ],
+          "move": false
+        },
+        {
+          "frame": 21,
+          "type": "PlaceObject2Tag",
+          "characterId": 144,
+          "depth": 896,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 26,
+          "type": "RemoveObject2Tag",
+          "depth": 890
+        },
+        {
+          "frame": 26,
+          "type": "RemoveObject2Tag",
+          "depth": 891
+        },
+        {
+          "frame": 26,
+          "type": "RemoveObject2Tag",
+          "depth": 895
+        },
+        {
+          "frame": 26,
+          "type": "RemoveObject2Tag",
+          "depth": 896
+        },
+        {
+          "frame": 26,
+          "type": "FrameLabelTag",
+          "name": "com"
+        },
+        {
+          "frame": 26,
+          "type": "DoActionTag",
+          "actionSha256": "dd8905b875c8804123116ea913c1725540705a5b0688f1e3b4ef4f55e80a0b62"
+        },
+        {
+          "frame": 27,
+          "type": "DoActionTag",
+          "actionSha256": "56866104972a7b76314587f16248c316cc552fcd23a63d6e2e7b4f488b26d4f9"
+        },
+        {
+          "frame": 30,
+          "type": "DoActionTag",
+          "actionSha256": "67ef81753616ace3988b3c8bd8b208b674de99230adac0cb46c382cde819a890"
+        },
+        {
+          "frame": 33,
+          "type": "DoActionTag",
+          "actionSha256": "432ebdca7e9c6daaf2a76da1596f834b0250a38fff1248b848232867257c42c5"
+        },
+        {
+          "frame": 34,
+          "type": "FrameLabelTag",
+          "name": "battle"
+        },
+        {
+          "frame": 34,
+          "type": "DoActionTag",
+          "actionSha256": "f701189d4dc169ae08010867b2206db1d3a6958554981298bc2a58712aba44cf"
+        },
+        {
+          "frame": 34,
+          "type": "PlaceObject2Tag",
+          "characterId": 147,
+          "depth": 890,
+          "ratio": 33,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 41,
+          "type": "RemoveObject2Tag",
+          "depth": 890
+        },
+        {
+          "frame": 41,
+          "type": "FrameLabelTag",
+          "name": "supply"
+        },
+        {
+          "frame": 41,
+          "type": "DoActionTag",
+          "actionSha256": "ca5b9708af0aa74c61d65e072e58ab131a6f203bdaf01b9df2290cc957e8801d"
+        },
+        {
+          "frame": 41,
+          "type": "PlaceObject2Tag",
+          "characterId": 149,
+          "depth": 890,
+          "name": "mcSupply",
+          "ratio": 40,
+          "matrix": [
+            1.0000458,
+            0.0,
+            0.0,
+            0.99990845,
+            0.0,
+            0.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 47,
+          "type": "RemoveObject2Tag",
+          "depth": 890
+        },
+        {
+          "frame": 47,
+          "type": "FrameLabelTag",
+          "name": "gameover"
+        },
+        {
+          "frame": 47,
+          "type": "DoActionTag",
+          "actionSha256": "1d44bc505c4b5872083f4952f8f367045f6bbfb69e44c880bd3a112204d412d3"
+        },
+        {
+          "frame": 47,
+          "type": "PlaceObject2Tag",
+          "characterId": 159,
+          "depth": 890,
+          "name": "mcGameover",
+          "ratio": 46,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            2.0,
+            -43.2
+          ],
+          "move": false
+        },
+        {
+          "frame": 56,
+          "type": "RemoveObject2Tag",
+          "depth": 890
+        },
+        {
+          "frame": 56,
+          "type": "FrameLabelTag",
+          "name": "youwin"
+        },
+        {
+          "frame": 56,
+          "type": "DoActionTag",
+          "actionSha256": "bc0e44d7ca640ccc00cae47db6d3c6a3d1b32711c9df998c95d164bdb4de429c"
+        },
+        {
+          "frame": 56,
+          "type": "PlaceObject2Tag",
+          "characterId": 163,
+          "depth": 890,
+          "name": "mcYouwin",
+          "ratio": 55,
+          "matrix": [
+            1.0,
+            0.0,
+            0.0,
+            1.0011444,
+            0.0,
+            0.0
+          ],
+          "move": false
+        },
+        {
+          "frame": 63,
+          "type": "RemoveObject2Tag",
+          "depth": 834
+        },
+        {
+          "frame": 63,
+          "type": "RemoveObject2Tag",
+          "depth": 841
+        },
+        {
+          "frame": 63,
+          "type": "RemoveObject2Tag",
+          "depth": 848
+        },
+        {
+          "frame": 63,
+          "type": "RemoveObject2Tag",
+          "depth": 855
+        },
+        {
+          "frame": 63,
+          "type": "RemoveObject2Tag",
+          "depth": 862
+        },
+        {
+          "frame": 63,
+          "type": "RemoveObject2Tag",
+          "depth": 869
+        },
+        {
+          "frame": 63,
+          "type": "RemoveObject2Tag",
+          "depth": 876
+        },
+        {
+          "frame": 63,
+          "type": "RemoveObject2Tag",
+          "depth": 883
+        },
+        {
+          "frame": 63,
+          "type": "RemoveObject2Tag",
+          "depth": 890
+        },
+        {
+          "frame": 63,
+          "type": "FrameLabelTag",
+          "name": "history"
+        },
+        {
+          "frame": 63,
+          "type": "DoActionTag",
+          "actionSha256": "a1cdacfdb0d924fade7fa67e9a5a9ec2ba57d7ac20f99c984f4c0cea2bd4a8ad"
+        },
+        {
+          "frame": 63,
+          "type": "PlaceObject2Tag",
+          "characterId": 169,
+          "depth": 834,
+          "name": "mcHistory",
+          "ratio": 62,
+          "matrix": [
+            1.0000458,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "move": false
+        }
+      ]
+    }
+  },
+  "renderWarning": "FFDec exports authored display lists; it does not execute AS2. Dynamic dice, text, visibility, map geometry and replay state require scripts. These are not Flash Player screenshots."
+}

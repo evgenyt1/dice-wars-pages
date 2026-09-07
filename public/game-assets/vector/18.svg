@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="20.8px" width="60.65px" viewBox="38.65 3.1 60.65 20.8">
+  <g>
+    <g transform="matrix(1.0, 0.0, 0.0, 1.0, 37.6, 0.0)">
+      <use fill="#000000" height="20.8" transform="matrix(0.5078, 0.0, 0.0, 0.5078, 0.0, 24.0)" width="60.65" xlink:href="#font_Monotone_P0" />
+      <use fill="#000000" height="20.8" transform="matrix(0.5078, 0.0, 0.0, 0.5078, 11.35, 24.0)" width="60.65" xlink:href="#font_Monotone_l0" />
+      <use fill="#000000" height="20.8" transform="matrix(0.5078, 0.0, 0.0, 0.5078, 20.35, 24.0)" width="60.65" xlink:href="#font_Monotone_a0" />
+      <use fill="#000000" height="20.8" transform="matrix(0.5078, 0.0, 0.0, 0.5078, 31.0, 24.0)" width="60.65" xlink:href="#font_Monotone_y0" />
+    </g>
+  </g>
+  <defs>
+    <g id="font_Monotone_P0">
+      <path d="M13.6 -18.85 L10.45 -18.85 10.45 -28.85 13.6 -28.85 13.6 -18.85 M1.9 0.0 L10.45 0.0 10.45 -12.3 16.3 -12.3 21.7 -17.3 21.7 -30.0 15.9 -35.0 1.9 -35.0 1.9 0.0" fill-rule="evenodd" stroke="none" />
+    </g>
+    <g id="font_Monotone_l0">
+      <path d="M16.9 0.0 L16.9 -6.55 9.6 -6.55 9.6 -35.0 1.4 -35.0 1.4 0.0 16.9 0.0" fill-rule="evenodd" stroke="none" />
+    </g>
+    <g id="font_Monotone_a0">
+      <path d="M12.7 -13.45 L8.8 -13.45 10.4 -28.1 11.15 -28.1 12.7 -13.45 M5.05 -35.0 L-0.45 0.0 7.7 0.0 8.45 -6.9 13.1 -6.9 13.9 0.0 22.05 0.0 16.6 -35.0 5.05 -35.0" fill-rule="evenodd" stroke="none" />
+    </g>
+    <g id="font_Monotone_y0">
+      <path d="M-0.05 -35.0 L7.0 -15.0 7.0 0.0 15.5 0.0 15.5 -15.0 22.45 -35.0 13.95 -35.0 12.0 -22.7 11.6 -22.7 8.45 -35.0 -0.05 -35.0" fill-rule="evenodd" stroke="none" />
+    </g>
+  </defs>
+</svg>
