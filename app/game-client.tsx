@@ -410,6 +410,9 @@ export default function GameClient() {
     document.addEventListener('visibilitychange', pageVisibility);
     window.addEventListener('pageshow', pageVisibility);
     window.addEventListener('pagehide', pageHidden);
+    // Read-only audio diagnostics for Safari Web Inspector on a phone.
+    (window as Window & { dicefrontAudio?: () => unknown }).dicefrontAudio =
+      audio.status;
     let live = true;
     void audio
       .load(controller.progress)

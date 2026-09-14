@@ -22,6 +22,9 @@ export class GameAudio {
   private clock: { time: number; at: number } | null = null;
   private buffers = new Map<SoundName, AudioBuffer>();
   private active = new Set<AudioBufferSourceNode>();
+  /** Settles when the first load finishes; decoding uses the loader's context. */
+  private loading: Promise<void> | null = null;
+  private replacements = 0;
   private readonly now: () => number;
   constructor(now: () => number = () => performance.now()) {
     this.now = now;
@@ -39,6 +42,16 @@ export class GameAudio {
     return context;
   }
   async load(progress: (value: number) => void) {
+    let settle = () => {};
+    this.loading = new Promise((resolve) => (settle = resolve));
+    try {
+      await this.decodeAll(progress);
+    } finally {
+      settle();
+      this.loading = null;
+    }
+  }
+  private async decodeAll(progress: (value: number) => void) {
     const context = this.context ?? this.createContext();
     if (this.unlocked) this.resume();
     let loaded = 0;
@@ -107,25 +120,41 @@ export class GameAudio {
     const previous = this.context;
     this.silence();
     this.createContext();
+    this.replacements++;
     this.suspect = false;
     this.clock = null;
-    if (previous && previous.state !== 'closed')
-      void previous.close().catch(() => undefined);
+    if (previous && previous.state !== 'closed') {
+      const close = () => void previous.close().catch(() => undefined);
+      // A tap during the first load must not close the context still decoding.
+      if (this.loading) void this.loading.then(close);
+      else close();
+    }
   }
-  unlock = () => {
-    this.unlocked = true;
+  /** True when this call moved the page onto the media ("playback") session. */
+  private requestPlaybackSession() {
     try {
-      // iOS 17+: route game audio as media, including when the ringer is silent.
+      // iOS 16.4+: route game audio as media, so the silent switch does not mute it.
+      // Requested on interaction only, so opening the page never stops other audio.
       const session = (
         navigator as Navigator & {
           audioSession?: { type: string };
         }
       ).audioSession;
-      if (session && session.type !== 'playback') session.type = 'playback';
+      if (!session || session.type === 'playback') return false;
+      session.type = 'playback';
+      return session.type === 'playback';
     } catch {
       // Browsers without AudioSession still use ordinary gesture-unlocked audio.
+      return false;
     }
-    if (this.needsReplacement()) this.replaceContext();
+  }
+  unlock = () => {
+    this.unlocked = true;
+    // WebKit applies the session category when a context starts. The loader's
+    // context started under the default ambient session, which the silent switch
+    // mutes, so a category change rebuilds the context inside this gesture.
+    const sessionChanged = this.requestPlaybackSession();
+    if (this.needsReplacement() || sessionChanged) this.replaceContext();
     this.resume();
   };
   /** Page shown again: try without a gesture, and judge health on the next gesture. */
@@ -162,6 +191,18 @@ export class GameAudio {
     }
     this.active.clear();
   };
+  /** Diagnostics for Web Inspector on a device: `dicefrontAudio()`. */
+  status = () => ({
+    unlocked: this.unlocked,
+    state: this.context?.state ?? 'none',
+    currentTime: this.context?.currentTime ?? 0,
+    session:
+      (navigator as Navigator & { audioSession?: { type: string } })
+        .audioSession?.type ?? 'unsupported',
+    suspect: this.suspect,
+    replacements: this.replacements,
+    buffers: this.buffers.size,
+  });
   close = () => {
     this.silence();
     void this.context?.close();

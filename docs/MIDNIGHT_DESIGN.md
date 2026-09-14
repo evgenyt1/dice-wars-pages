@@ -396,3 +396,22 @@ documented in the fidelity plan and are not claimed complete here.
   dice gained. Game rules, timing and layout order are unchanged.
 - Headless Chrome at 390×844 (7 players), 320×640 (8), 844×390 landscape (8)
   and 1280×800 Midnight (6) shows one HUD row without overflow.
+
+### Silent switch and first-tap audio session (14 September 2026)
+
+- The user reported sounds sometimes missing even after closing and reopening
+  the app. The game persists only the Sound on/off choice; the iPhone ring/silent
+  switch also persists across launches. Safari's default audio session is
+  ambient, which the silent switch mutes. The context is created during loading,
+  before any tap, and WebKit applies the session category when a context starts,
+  so switching to `playback` on the first tap did not reach that context.
+- The tap that switches the page to the `playback` session now rebuilds the
+  context inside the same gesture, reusing the decoded buffers. Opening the page
+  still never interrupts other audio. A tap during loading defers closing the
+  decoding context until the sounds are ready.
+- `dicefrontAudio()` in Safari Web Inspector reports context state, clock,
+  session type, unlock state and rebuild count for on-device diagnosis.
+- Evidence: [MDN AudioSession type](https://developer.mozilla.org/docs/Web/API/AudioSession/type),
+  [WebKit 263627](https://bugs.webkit.org/show_bug.cgi?id=263627) (running
+  context with a frozen clock after foregrounding, still open). Physical iPhone
+  confirmation with the silent switch on and off remains open.

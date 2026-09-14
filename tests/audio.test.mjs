@@ -2,9 +2,10 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { GameAudio } from '../app/game-audio.ts';
 
-async function setupAudio(t, session, now) {
+async function setupAudio(t, session, now, awaitLoad = true) {
   const nodes = [];
   const contexts = [];
+  const platform = { rejectResume: false };
   let context;
   class Context {
     state = 'suspended';
@@ -22,7 +23,8 @@ async function setupAudio(t, session, now) {
     };
     resume = async () => {
       this.resumes++;
-      if (this.rejectResume) throw new Error('User activation required');
+      if (this.rejectResume || platform.rejectResume)
+        throw new Error('User activation required');
       await Promise.resolve();
       this.state = 'running';
     };
@@ -69,9 +71,12 @@ async function setupAudio(t, session, now) {
   });
   const audio = new GameAudio(now);
   const progress = [];
-  await audio.load((value) => progress.push(value));
-  assert.equal(progress.at(-1), 100);
-  return { audio, context, contexts, nodes };
+  const loading = audio.load((value) => progress.push(value));
+  if (awaitLoad) {
+    await loading;
+    assert.equal(progress.at(-1), 100);
+  }
+  return { audio, context, contexts, nodes, platform, loading };
 }
 
 test('first physical press schedules its sound while audio unlock is pending, without dropping it', async (t) => {
@@ -99,24 +104,72 @@ test('first physical press schedules its sound while audio unlock is pending, wi
   audio.close();
 });
 
-test('iPhone playback session is requested on interaction, with retry after rejected touch-start', async (t) => {
+test('first tap moves iPhone audio to the playback session and restarts the context under it', async (t) => {
   const session = { type: 'ambient' };
-  const { audio, context, nodes } = await setupAudio(t, session);
-  assert.equal(session.type, 'ambient');
+  const { audio, contexts, nodes, platform } = await setupAudio(t, session);
+  assert.equal(
+    session.type,
+    'ambient',
+    'opening the page never stops other audio',
+  );
   audio.recover();
-  assert.equal(context.resumes, 0, 'page visibility must not unlock autoplay');
-  context.rejectResume = true;
-  audio.unlock();
+  assert.equal(
+    contexts[0].resumes,
+    0,
+    'page visibility must not unlock autoplay',
+  );
+  platform.rejectResume = true;
+  audio.unlock(); // touch-start: may not grant playback
   audio.play('button');
   await Promise.resolve();
   assert.equal(session.type, 'playback');
-  assert.equal(context.state, 'suspended');
-  context.rejectResume = false;
+  assert.equal(
+    contexts.length,
+    2,
+    'the ambient-session loader context is rebuilt',
+  );
+  assert.equal(contexts[0].state, 'closed');
+  assert.equal(contexts[1].state, 'suspended');
+  platform.rejectResume = false;
   audio.unlock(); // touch-end / click gets a fresh user activation
   await Promise.resolve();
-  assert.equal(context.state, 'running');
-  assert.equal(context.resumes, 2);
+  assert.equal(contexts.length, 2, 'one rebuild per session change');
+  assert.equal(contexts[1].state, 'running');
+  assert.equal(contexts[1].resumes, 2);
   assert.equal(nodes.length, 1, 'recovery must not duplicate the queued cue');
+  assert.equal(nodes[0].context, contexts[1]);
+  assert.deepEqual(
+    { ...audio.status(), currentTime: 0 },
+    {
+      unlocked: true,
+      state: 'running',
+      currentTime: 0,
+      session: 'playback',
+      suspect: false,
+      replacements: 1,
+      buffers: 8,
+    },
+  );
+  audio.close();
+});
+
+test('a first tap during loading keeps the decoding context until sounds are ready', async (t) => {
+  const session = { type: 'ambient' };
+  const { audio, contexts, nodes, loading } = await setupAudio(
+    t,
+    session,
+    undefined,
+    false,
+  );
+  audio.unlock();
+  assert.equal(contexts.length, 2);
+  assert.notEqual(contexts[0].state, 'closed', 'decoding continues');
+  await loading;
+  await Promise.resolve();
+  assert.equal(contexts[0].state, 'closed');
+  await Promise.resolve();
+  audio.play('dice');
+  assert.equal(nodes.at(-1).context, contexts[1]);
   audio.close();
 });
 
