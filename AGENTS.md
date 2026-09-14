@@ -1,19 +1,17 @@
-# Dice Wars Pages instructions
+# Dicefront Pages instructions
 
-This repository publishes the native Dice Wars restoration to GitHub Pages.
+This repository publishes Dicefront to GitHub Pages at
+`https://evgenyt1.github.io/dice-wars-pages/`.
 
-- Read `docs/FLASH_PORT_REFERENCE.md`, `docs/FLASH_FIDELITY_PLAN.md` and
-  `docs/flash-reference/README.md` before changing gameplay, timing or artwork.
-- Preserve original vectors, glyphs, sounds, deterministic engine rules and
-  historical quirks. Do not replace the native implementation with a SWF player.
-- Keep the complete 800×600 stage proportional on all screen sizes, retaining
-  keyboard input, accessible names, live announcements and sound controls.
-- Keep model tools synchronous with UI legality and phase transitions.
-- This is a static Vite/React application. Keep asset URLs compatible with the
-  `/dice-wars-pages/` base path. No server or Sites identity is needed here.
-- Before pushing, run `npm test`, `npm run build`, `npx tsc --noEmit`, and
-  `npx oxlint app`. Inspect relevant interactions at desktop/mobile widths.
+- It mirrors `evgenyt1/dice`. Make application changes there, then run
+  `node scripts/publish-pages.mjs` from that repository and push this one.
+  Direct edits to mirrored files here are overwritten by the next publish.
+- This repository owns only `README.md`, `AGENTS.md` and `.github/`.
+- The static build is `npm run build:pages` (`vite.pages.config.ts`, entry in
+  `gh-pages/`). Keep public file URLs compatible with the `/dice-wars-pages/`
+  base path and the service worker's registration scope.
+- `.github/workflows/pages.yml` runs tests, TypeScript, authored lint and the
+  static build, then deploys `dist-pages/`.
 - Push normally to `evgenyt1/dice-wars-pages`. Never force-push, commit secrets,
   build output, dependencies or temporary decompiler exports.
-- `.github/workflows/pages.yml` validates and publishes `main` to GitHub Pages.
 - Do not claim final 1:1 fidelity while the documented comparison gaps remain.

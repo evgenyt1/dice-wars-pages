@@ -1,11 +1,16 @@
-# Dice Wars — GitHub Pages
+# Dicefront — GitHub Pages
 
-[Play Dice Wars](https://evgenyt1.github.io/dice-wars-pages/)
+[Play Dicefront](https://evgenyt1.github.io/dice-wars-pages/)
 
-Native web port of the original Dice Wars, with original vector artwork and
-sounds. This separate static publication starts from
-[`evgenyt1/dice` at `5d56404`](https://github.com/evgenyt1/dice/commit/5d56404).
-The original Sites project remains independently maintained.
+A dice strategy game: a native web port of the classic Dice Wars rules with a
+full-screen board, two visual themes and tactile sounds. It installs to the home
+screen, resumes a game where you left it, and plays offline after the first
+online visit.
+
+This repository is a publication mirror of the private `evgenyt1/dice`
+repository. Application sources are copied from there by
+`scripts/publish-pages.mjs`; each publish commit names the source revision.
+Only `README.md`, `AGENTS.md` and `.github/` belong to this repository.
 
 ## Development
 
@@ -13,31 +18,18 @@ Use Node.js 22.13 or newer and the committed npm lockfile:
 
 ```sh
 npm ci
-npm run dev
-```
-
-```sh
 npm test
-npm run typecheck
-npm run lint
-npm run build
-npm run preview
+npx tsc --noEmit
+npx oxlint app pwa gh-pages
+npm run build:pages
+npm run preview:pages
 ```
 
-The Vite build outputs a static `dist/` folder. GitHub Actions validates and
-publishes it automatically on pushes to `main`; built files are not committed.
-The Pages base path is `/dice-wars-pages/`. Artwork and sound URLs are relative
-to the document so they resolve within that path.
+`npm run build:pages` writes the static site to `dist-pages/` with the
+`/dice-wars-pages/` base path (override with `PAGES_BASE`). GitHub Actions runs
+the same checks and deploys on pushes to `main`; built files are not committed.
 
-## Fidelity and attribution
-
-Original Dice Wars artwork and audio are by GAMEDESIGN. The original SWF is not
-included or executed. The engine, frame controller and extracted asset bytes
-are retained from the upstream native restoration; the changes here are the
-static entry point, hosting configuration and asset URL prefix.
-
-All 47 upstream tests are retained, covering player counts 2–8 and exact asset
-hashes. Final 1:1 certification still requires the comparisons listed in
-[the implementation evidence](docs/flash-reference/IMPLEMENTATION.md). The
-reference documents preserve the upstream checkpoint and its Sites deployment
-history; this README describes the separate GitHub Pages publication.
+Game rules, fidelity evidence and design decisions are documented in `docs/`.
+The original SWF is not included or executed. Final 1:1 fidelity certification
+still requires the comparisons listed in
+[the implementation evidence](docs/flash-reference/IMPLEMENTATION.md).
