@@ -46,6 +46,7 @@ import {
 } from './game-layout';
 import {
   THEMES,
+  hudInk,
   interiorHexPath,
   playerTerritoryLabel,
 } from './game-presentation';
@@ -194,21 +195,29 @@ function Hud({ game, theme }: { game: GameState; theme: GameTheme }) {
   const living = game.turnOrder.filter((id) => game.players[id].connected > 0);
   return (
     <div className="player-hud" aria-label="Player connected groups">
-      {living.map((id) => (
-        <div
-          key={id}
-          className={`hud-player${currentPlayer(game) === id ? ' active' : ''}`}
-          title={`${THEMES[theme].palette[id].name}${id === 0 ? ' (you)' : ''}${currentPlayer(game) === id ? ' · Current turn' : ''}`}
-          aria-label={`${THEMES[theme].palette[id].name}${id === 0 ? ', you' : ''}: largest connected group ${game.players[id].connected}${currentPlayer(game) === id ? ', current turn' : ''}`}
-        >
-          <span
-            className="hud-color"
-            style={{ backgroundColor: THEMES[theme].palette[id].color }}
-            aria-hidden="true"
-          />
-          {id === 0 && <small>YOU</small>}
-        </div>
-      ))}
+      {living.map((id) => {
+        const { name, color } = THEMES[theme].palette[id];
+        // Reinforcement at end of turn equals the largest connected group.
+        const dice = game.players[id].connected;
+        const current = currentPlayer(game) === id;
+        return (
+          <div
+            key={id}
+            className={`hud-player${current ? ' active' : ''}`}
+            title={`${name}${id === 0 ? ' (you)' : ''}: +${dice} dice at end of turn${current ? ' · Current turn' : ''}`}
+            aria-label={`${name}${id === 0 ? ', you' : ''}: largest connected group ${dice}, gets ${dice} ${dice === 1 ? 'die' : 'dice'} at end of turn${current ? ', current turn' : ''}`}
+          >
+            <span
+              className="hud-color"
+              style={{ backgroundColor: color, color: hudInk(color) }}
+              aria-hidden="true"
+            >
+              {dice}
+            </span>
+            {id === 0 && <small>YOU</small>}
+          </div>
+        );
+      })}
     </div>
   );
 }

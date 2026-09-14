@@ -383,3 +383,16 @@ documented in the fidelity plan and are not claimed complete here.
   both the Sites build (`/`) and the static build (`/dice-wars-pages/`) resumed
   a mid-selection game after reload, then relaunched with the server stopped,
   resumed and resolved an attack. The offline subpath render was inspected.
+
+### HUD reinforcement numbers (14 September 2026)
+
+- The user asked for a number in each player's colored HUD box so the dice each
+  player receives at End Turn are visible. Reinforcement is the largest
+  connected group (`startSupply`), not the total territory count, so each chip
+  shows that value; this is also the number the original HUD displayed.
+- The color swatch became a small chip with the number inside. Text is dark or
+  white, whichever contrasts more; a test keeps every Original and Midnight
+  player color at WCAG 4.5:1 or better. Tooltips and accessible names state the
+  dice gained. Game rules, timing and layout order are unchanged.
+- Headless Chrome at 390×844 (7 players), 320×640 (8), 844×390 landscape (8)
+  and 1280×800 Midnight (6) shows one HUD row without overflow.

@@ -591,9 +591,19 @@ a {
   border-color: var(--dw-line);
 }
 .hud-color {
-  width: 10px;
-  height: 10px;
-  border-radius: 3px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 18px;
+  padding: 0 4px;
+  border-radius: 4px;
+  font:
+    700 11px/1 'Space Grotesk',
+    Manrope,
+    Arial,
+    sans-serif;
+  font-variant-numeric: tabular-nums;
 }
 .hud-player small {
   font-size: 9px;

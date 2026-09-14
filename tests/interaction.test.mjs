@@ -4,6 +4,8 @@ import { GameController } from '../app/game-controller.ts';
 import { GameInteraction } from '../app/game-interaction.ts';
 import { seededRandom } from '../app/game-engine.ts';
 import {
+  contrastRatio,
+  hudInk,
   interiorHexPath,
   PLAYER_PALETTE,
   THEMES,
@@ -152,4 +154,12 @@ test('theme switches preserve selection, battle timing, RNG, reinforcement and A
     tick();
     assert.ok(i < 20000);
   }
+});
+
+test('HUD reinforcement numbers are readable on every player color in both themes', () => {
+  for (const theme of Object.values(THEMES))
+    for (const { name, color } of theme.palette) {
+      const ratio = contrastRatio(color, hudInk(color));
+      assert.ok(ratio >= 4.5, `${theme.name} ${name}: ${ratio.toFixed(2)}`);
+    }
 });

@@ -63,6 +63,28 @@ export function diceHref(
   return `${THEMES[theme].diceUrl}#${symbol}`;
 }
 
+const HUD_DARK_INK = '#14121b';
+const HUD_LIGHT_INK = '#ffffff';
+function luminance(hex: string) {
+  const [r, g, b] = [1, 3, 5].map((i) => {
+    const c = parseInt(hex.slice(i, i + 2), 16) / 255;
+    return c <= 0.04045 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4;
+  });
+  return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+}
+/** WCAG contrast ratio between two #rrggbb colors. */
+export function contrastRatio(a: string, b: string) {
+  const [light, dark] = [luminance(a), luminance(b)].sort((x, y) => y - x);
+  return (light + 0.05) / (dark + 0.05);
+}
+/** Text color for a number drawn on a player's color chip. */
+export function hudInk(color: string) {
+  return contrastRatio(color, HUD_DARK_INK) >=
+    contrastRatio(color, HUD_LIGHT_INK)
+    ? HUD_DARK_INK
+    : HUD_LIGHT_INK;
+}
+
 export function playerTerritoryLabel(
   game: GameState,
   id: number,
