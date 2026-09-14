@@ -1,5 +1,21 @@
 export const GRID_WIDTH = 32;
 export const GRID_HEIGHT = 28;
+export const CELL_COUNT = GRID_WIDTH * GRID_HEIGHT;
+export interface GridGeometry {
+  readonly columns: number;
+  readonly rows: number;
+}
+export const CLASSIC_GRID: GridGeometry = Object.freeze({
+  columns: GRID_WIDTH,
+  rows: GRID_HEIGHT,
+});
+
+/** Fixed cell budget; a partial final row is outside the board, never a wrap. */
+export function gridForColumns(columns: number): GridGeometry {
+  if (!Number.isInteger(columns) || columns < 12 || columns > 64)
+    throw new Error('Grid columns must be an integer from 12 through 64.');
+  return Object.freeze({ columns, rows: Math.ceil(CELL_COUNT / columns) });
+}
 export const AREA_LIMIT = 32;
 export const CELL_WIDTH = 23;
 export const CELL_HEIGHT = 14;
@@ -54,6 +70,7 @@ export interface HistoryFrame {
 }
 
 export interface GameState {
+  readonly grid: GridGeometry;
   playerCount: number;
   cellTerritory: number[];
   territories: Territory[];
@@ -98,19 +115,18 @@ export function seededRandom(seed: number): Random {
 
 /** Lives for the whole application, including title returns and map rerolls. */
 export class MapGenerator {
-  readonly priority = Array.from(
-    { length: GRID_WIDTH * GRID_HEIGHT },
-    (_, i) => i,
-  );
+  readonly priority = Array.from({ length: CELL_COUNT }, (_, i) => i);
   readonly random: Random;
   constructor(random: Random = Math.random) {
     this.random = random;
   }
-  preview(playerCount: number): GameState {
+  preview(playerCount: number, shape: GridGeometry = CLASSIC_GRID): GameState {
     const count = Math.max(2, Math.min(8, Math.floor(playerCount)));
-    const map = buildMap(count, this.priority, this.random);
+    const grid = gridForColumns(shape.columns);
+    const map = buildMap(count, this.priority, this.random, grid);
     const initial = makeHistoryFrame(map.territories, 'Campaign begins');
     return {
+      grid,
       playerCount: count,
       ...map,
       players: playerStates(map.territories),
@@ -124,7 +140,7 @@ export class MapGenerator {
   }
 }
 
-const allCells = GRID_WIDTH * GRID_HEIGHT;
+const allCells = CELL_COUNT;
 
 function shuffle<T>(values: T[], random: Random): T[] {
   for (let i = 0; i < values.length; i += 1) {
@@ -138,9 +154,13 @@ function randomItem<T>(values: T[], random: Random): T {
   return values[Math.floor(random() * values.length)];
 }
 
-export function neighborOf(cell: number, direction: number): number {
-  const x = cell % GRID_WIDTH;
-  const y = Math.floor(cell / GRID_WIDTH);
+export function neighborOf(
+  cell: number,
+  direction: number,
+  grid: GridGeometry = CLASSIC_GRID,
+): number {
+  const x = cell % grid.columns;
+  const y = Math.floor(cell / grid.columns);
   const odd = y % 2;
   let dx = 0;
   let dy = 0;
@@ -172,20 +192,27 @@ export function neighborOf(cell: number, direction: number): number {
 
   const nextX = x + dx;
   const nextY = y + dy;
-  if (nextX < 0 || nextY < 0 || nextX >= GRID_WIDTH || nextY >= GRID_HEIGHT) {
+  if (nextX < 0 || nextY < 0 || nextX >= grid.columns || nextY >= grid.rows) {
     return -1;
   }
-  return nextY * GRID_WIDTH + nextX;
+  const next = nextY * grid.columns + nextX;
+  return next < CELL_COUNT ? next : -1;
 }
 
-export function cellOrigin(cell: number): [number, number] {
-  const x = cell % GRID_WIDTH;
-  const y = Math.floor(cell / GRID_WIDTH);
+export function cellOrigin(
+  cell: number,
+  grid: GridGeometry = CLASSIC_GRID,
+): [number, number] {
+  const x = cell % grid.columns;
+  const y = Math.floor(cell / grid.columns);
   return [x * CELL_WIDTH + (y % 2 ? CELL_WIDTH / 2 : 0), y * CELL_HEIGHT];
 }
 
-export function cellPolygon(cell: number): string {
-  const [x, y] = cellOrigin(cell);
+export function cellPolygon(
+  cell: number,
+  grid: GridGeometry = CLASSIC_GRID,
+): string {
+  const [x, y] = cellOrigin(cell, grid);
   const points = [
     [CELL_WIDTH / 2, -3],
     [CELL_WIDTH, 3],
@@ -200,8 +227,9 @@ export function cellPolygon(cell: number): string {
 export function cellEdge(
   cell: number,
   direction: number,
+  grid: GridGeometry = CLASSIC_GRID,
 ): [number, number, number, number] {
-  const [x, y] = cellOrigin(cell);
+  const [x, y] = cellOrigin(cell, grid);
   const points = [
     [CELL_WIDTH / 2, -3],
     [CELL_WIDTH, 3],
@@ -223,6 +251,7 @@ function growTerritory(
   start: number,
   maximum: number,
   territory: number,
+  grid: GridGeometry,
 ): number {
   const next = Array(allCells).fill(0) as number[];
   let current = start;
@@ -232,7 +261,7 @@ function growTerritory(
     cells[current] = territory;
     count += 1;
     for (let direction = 0; direction < 6; direction += 1) {
-      const neighbor = neighborOf(current, direction);
+      const neighbor = neighborOf(current, direction, grid);
       if (neighbor >= 0) next[neighbor] = 1;
     }
 
@@ -253,7 +282,7 @@ function growTerritory(
     cells[cell] = territory;
     count += 1;
     for (let direction = 0; direction < 6; direction += 1) {
-      const neighbor = neighborOf(cell, direction);
+      const neighbor = neighborOf(cell, direction, grid);
       if (neighbor >= 0) frontier[neighbor] = 1;
     }
   }
@@ -264,6 +293,7 @@ function buildMap(
   playerCount: number,
   priority: number[],
   random: Random,
+  grid: GridGeometry,
 ): Pick<GameState, 'cellTerritory' | 'territories'> {
   shuffle(priority, random);
   const cells = Array(allCells).fill(0) as number[];
@@ -286,7 +316,8 @@ function buildMap(
     }
     if (
       start < 0 ||
-      growTerritory(cells, frontier, priority, start, 8, territoryId) === 0
+      growTerritory(cells, frontier, priority, start, 8, territoryId, grid) ===
+        0
     ) {
       break;
     }
@@ -298,7 +329,7 @@ function buildMap(
     let touchesEmpty = false;
     let replacement = 0;
     for (let direction = 0; direction < 6; direction += 1) {
-      const neighbor = neighborOf(cell, direction);
+      const neighbor = neighborOf(cell, direction, grid);
       if (neighbor < 0) continue;
       if (cells[neighbor] === 0) touchesEmpty = true;
       else replacement = cells[neighbor];
@@ -335,19 +366,19 @@ function buildMap(
   for (const territory of territories) {
     territory.size = territory.cells.length;
     if (!territory.size) continue;
-    let left = GRID_WIDTH;
+    let left = grid.columns;
     let right = -1;
-    let top = GRID_HEIGHT;
+    let top = grid.rows;
     let bottom = -1;
     for (const cell of territory.cells) {
-      const x = cell % GRID_WIDTH;
-      const y = Math.floor(cell / GRID_WIDTH);
+      const x = cell % grid.columns;
+      const y = Math.floor(cell / grid.columns);
       left = Math.min(left, x);
       right = Math.max(right, x);
       top = Math.min(top, y);
       bottom = Math.max(bottom, y);
       for (let direction = 0; direction < 6; direction += 1) {
-        const neighbor = neighborOf(cell, direction);
+        const neighbor = neighborOf(cell, direction, grid);
         const other = neighbor > 0 ? cells[neighbor] : 0;
         if (
           other > 0 &&
@@ -362,11 +393,11 @@ function buildMap(
     const centerY = Math.floor((top + bottom) / 2);
     let bestScore = Number.POSITIVE_INFINITY;
     for (const cell of territory.cells) {
-      const x = cell % GRID_WIDTH;
-      const y = Math.floor(cell / GRID_WIDTH);
+      const x = cell % grid.columns;
+      const y = Math.floor(cell / grid.columns);
       let boundary = false;
       for (let direction = 0; direction < 6; direction += 1) {
-        const neighbor = neighborOf(cell, direction);
+        const neighbor = neighborOf(cell, direction, grid);
         if (neighbor > 0 && cells[neighbor] !== territory.id) boundary = true;
       }
       const score =
@@ -393,7 +424,7 @@ function buildMap(
     territory.neighbors.sort((a, b) => a - b);
     for (const cell of territory.cells) {
       const direction = Array.from({ length: 6 }, (_, d) => d).find((d) => {
-        const next = neighborOf(cell, d);
+        const next = neighborOf(cell, d, grid);
         return next >= 0 && cells[next] !== territory.id;
       });
       if (direction === undefined) continue;
@@ -402,7 +433,7 @@ function buildMap(
       territory.outline.push({ cell: c, direction: d });
       for (let i = 0; i < 100; i++) {
         d = (d + 1) % 6;
-        const next = neighborOf(c, d);
+        const next = neighborOf(c, d, grid);
         if (next >= 0 && cells[next] === territory.id) {
           c = next;
           d = (d + 4) % 6;
@@ -517,13 +548,16 @@ export function createGame(
   return acceptMap(new MapGenerator(random).preview(playerCount), random);
 }
 
-export function territoryPath(territory: Territory): string {
+export function territoryPath(
+  territory: Territory,
+  grid: GridGeometry = CLASSIC_GRID,
+): string {
   if (!territory.outline.length) return '';
   const first = territory.outline[0];
-  const [x, y] = cellEdge(first.cell, first.direction);
+  const [x, y] = cellEdge(first.cell, first.direction, grid);
   let path = `M${x},${y}`;
   for (const point of territory.outline.slice(0, 100)) {
-    const [, , ex, ey] = cellEdge(point.cell, point.direction);
+    const [, , ex, ey] = cellEdge(point.cell, point.direction, grid);
     path += `L${ex},${ey}`;
     const next = territory.outline[territory.outline.indexOf(point) + 1];
     if (next?.cell === first.cell && next.direction === first.direction) break;

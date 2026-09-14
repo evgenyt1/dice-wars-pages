@@ -1,19 +1,19 @@
 {
-  "name": "dice-wars-pages",
+  "name": "sites-project",
   "version": "0.1.0",
   "private": true,
   "engines": {
     "node": ">=22.13.0"
   },
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "start": "vite preview",
-    "lint": "oxlint app",
+    "dev": "vinext dev",
+    "build": "vinext build",
+    "build:pages": "vite build --config vite.pages.config.ts",
+    "start": "wrangler dev --config dist/server/wrangler.json",
+    "preview:pages": "vite preview --config vite.pages.config.ts",
+    "lint": "oxlint",
     "test": "node --experimental-strip-types --test tests/*.test.mjs",
-    "format": "oxfmt",
-    "preview": "vite preview",
-    "typecheck": "tsc --noEmit"
+    "format": "oxfmt"
   },
   "dependencies": {
     "react": "19.2.6",

@@ -1,5 +1,11 @@
 # Dice Wars: original Flash fidelity specification
 
+**Current presentation:** the user subsequently approved Dicefront/Midnight,
+Classic contrast colors, Larger bold resin dice and Tactile sounds.
+See [design decisions](MIDNIGHT_DESIGN.md).
+The visual/audio restoration instructions below document the historical baseline;
+the verified rules, RNG, geometry and timing remain the gameplay contract.
+
 Audited 2026-09-07 against the actual SWF and web commit `8d8ff36`.
 
 **Target: a native 1:1 reproduction of this SWF, with original graphics enlarged

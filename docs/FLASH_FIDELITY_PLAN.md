@@ -1,5 +1,10 @@
 # Route to a 1:1 native Dice Wars port
 
+**Presentation update:** the user has approved the Dicefront/Midnight redesign
+and Tactile audio; see [current design decisions](MIDNIGHT_DESIGN.md). The
+restoration milestones below remain historical evidence. Continue preserving
+verified gameplay and timing while using the approved current presentation.
+
 The user's requested permanent implementation route. The research checkpoint is preserved; the native restoration is implemented and deployed. Final 1:1 comparison gates remain open. Read [the full specification](FLASH_PORT_REFERENCE.md) before work.
 
 ## 0. Research checkpoint — completed

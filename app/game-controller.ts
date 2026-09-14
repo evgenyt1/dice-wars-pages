@@ -1,5 +1,7 @@
 import {
   MapGenerator,
+  CLASSIC_GRID,
+  gridForColumns,
   acceptMap,
   advanceTurn,
   applyBattle,
@@ -14,7 +16,14 @@ import {
   validSources,
   validTargets,
 } from './game-engine.ts';
-import type { BattleResult, GameState, Random } from './game-engine.ts';
+import type {
+  BattleResult,
+  GameState,
+  GridGeometry,
+  Random,
+} from './game-engine.ts';
+import { SESSION_VERSION } from './game-session.ts';
+import type { SavedSession } from './game-session.ts';
 
 export type SoundName =
   | 'button'
@@ -136,6 +145,9 @@ export class GameController {
   private supplyWait = 0;
   private supplyFinished = false;
   private replayWait = 0;
+  private previewGrid: GridGeometry = CLASSIC_GRID;
+  private pendingSession: SavedSession | null = null;
+  private historyEnd: { mode: 'lost' | 'won'; game: GameState } | null = null;
   constructor(
     random: Random = Math.random,
     sound: (name: SoundName) => void = () => {},
@@ -166,20 +178,185 @@ export class GameController {
   ready = () => {
     if (this.view.mode === 'loading') this.update({ loaded: 100, frame: 1 });
   };
+  /** Applies saved preferences now; the saved screen is entered when loading completes. */
+  restore = (saved: SavedSession) => {
+    if (this.view.mode !== 'loading') return;
+    this.generator.priority.splice(0, saved.priority.length, ...saved.priority);
+    this.pendingSession = saved;
+    this.update({ count: saved.count, sound: saved.sound });
+  };
+  /** Resumable snapshot for storage. Null while loading has nothing to replace. */
+  session = (): SavedSession | null => {
+    const s = this.view;
+    if (s.mode === 'loading')
+      return this.pendingSession
+        ? { ...this.pendingSession, count: s.count, sound: s.sound }
+        : null;
+    const base: Omit<SavedSession, 'mode'> = {
+      version: SESSION_VERSION,
+      count: s.count,
+      sound: s.sound,
+      priority: [...this.generator.priority],
+      phase: 'idle',
+      frame: 1,
+      game: null,
+      selected: null,
+      target: null,
+      battle: null,
+      aiMove: null,
+      supplyWait: 0,
+      supplyFinished: false,
+    };
+    // A replay is not resumed mid-way; the finished campaign returns to its result.
+    if (s.mode === 'history')
+      return this.historyEnd
+        ? {
+            ...base,
+            mode: this.historyEnd.mode,
+            phase: 'result',
+            frame: this.historyEnd.mode === 'lost' ? 50 : 40,
+            game: this.historyEnd.game,
+          }
+        : { ...base, mode: 'title' };
+    if (s.mode === 'title' || s.mode === 'building' || !s.game)
+      return { ...base, mode: s.mode === 'building' ? 'building' : 'title' };
+    return {
+      ...base,
+      mode: s.mode,
+      phase: s.phase,
+      frame: s.frame,
+      game: s.game,
+      selected: s.selected,
+      target: s.target,
+      battle: s.phase === 'battle' ? s.battle : null,
+      aiMove: s.phase === 'ai' ? this.aiMove : null,
+      supplyWait: s.phase === 'supply' ? this.supplyWait : 0,
+      supplyFinished: s.phase === 'supply' && this.supplyFinished,
+    };
+  };
+  private resume() {
+    const saved = this.pendingSession;
+    this.pendingSession = null;
+    if (saved?.mode === 'building') {
+      // A map was being built; build a fresh preview for the remembered count.
+      this.update({
+        mode: 'building',
+        phase: 'idle',
+        notice: 'Please wait...',
+      });
+      return;
+    }
+    if (!saved || !saved.game) return this.title();
+    const game = saved.game;
+    const cleared = {
+      game,
+      selected: null,
+      target: null,
+      battle: null,
+      rolls: [[], []],
+      totals: [null, null],
+      replayIndex: 0,
+    };
+    if (saved.mode === 'preview') {
+      this.previewGrid = game.grid;
+      this.update({
+        ...cleared,
+        mode: 'preview',
+        phase: 'idle',
+        frame: 3,
+        notice: 'Do you play this one?',
+      });
+      return;
+    }
+    if (saved.mode === 'lost' || saved.mode === 'won') {
+      const end = saved.mode === 'lost' ? 50 : 40;
+      this.update({
+        ...cleared,
+        mode: saved.mode,
+        phase: 'result',
+        frame: Math.max(1, Math.min(saved.frame, end)),
+        notice: saved.mode === 'lost' ? 'Game over.' : 'You win!',
+      });
+      return;
+    }
+    const human = currentPlayer(game) === 0;
+    const move = saved.aiMove;
+    const playing = { ...cleared, mode: 'playing' as const };
+    if (saved.phase === 'battle' && saved.battle) {
+      // The stored rolls are replayed, so reopening cannot reroll a battle.
+      this.animation = new BattleAnimation(
+        saved.battle,
+        human,
+        this.generator.random,
+      );
+      this.update({
+        ...playing,
+        phase: 'battle',
+        frame: 34,
+        selected: saved.battle.from,
+        target: saved.battle.to,
+        battle: saved.battle,
+        notice: 'Game resumed. Dice are rolling.',
+      });
+    } else if (saved.phase === 'supply') {
+      this.supplyWait = Math.max(1, saved.supplyWait);
+      this.supplyFinished = saved.supplyFinished;
+      this.update({
+        ...playing,
+        phase: 'supply',
+        frame: 1,
+        notice: 'Game resumed. Reinforcements.',
+      });
+    } else if (
+      saved.phase === 'ai' &&
+      !human &&
+      move &&
+      validSources(game).includes(move[0]) &&
+      validTargets(game, move[0]).includes(move[1])
+    ) {
+      const frame = Math.max(26, Math.min(saved.frame, 32));
+      this.aiMove = move;
+      this.update({
+        ...playing,
+        phase: 'ai',
+        frame,
+        selected: frame >= 27 ? move[0] : null,
+        target: frame >= 30 ? move[1] : null,
+        notice: 'Game resumed. Computer turn.',
+      });
+    } else if (
+      saved.phase === 'target' &&
+      human &&
+      saved.selected !== null &&
+      validSources(game).includes(saved.selected)
+    ) {
+      this.update({
+        ...playing,
+        phase: 'target',
+        frame: 21,
+        selected: saved.selected,
+        notice:
+          'Game resumed. Click an enemy neighbor to attack. Click your selected area again to cancel.',
+      });
+    } else {
+      this.update(playing);
+      this.startPlayer(false, 'Game resumed. ');
+    }
+  }
   title = () => {
     this.animation = null;
     this.aiMove = null;
+    this.pendingSession = null;
+    this.historyEnd = null;
     const colors = [0, 1, 2, 3, 4, 5, 6, 7];
     for (let i = 0; i < 8; i++) {
       const j = Math.floor(this.generator.random() * 8);
       [colors[i], colors[j]] = [colors[j], colors[i]];
     }
-    const titleDice = colors
-      .slice(0, 3)
-      .map((owner) => ({
-        owner,
-        face: Math.floor(this.generator.random() * 6) + 1,
-      }));
+    const titleDice = colors.slice(0, 3).map((owner) => ({
+      owner,
+      face: Math.floor(this.generator.random() * 6) + 1,
+    }));
     this.update({
       mode: 'title',
       phase: 'idle',
@@ -217,12 +394,20 @@ export class GameController {
       notice: 'Please wait...',
     });
   };
+  /** Resize may rebuild an unconfirmed preview, never an accepted campaign. */
+  setPreviewGrid = (shape: GridGeometry) => {
+    if (shape.columns === this.previewGrid.columns) return;
+    this.previewGrid = gridForColumns(shape.columns);
+    if (this.view.mode === 'preview') this.preview();
+  };
   accept = () => {
     if (this.view.mode !== 'preview' || !this.view.game) return;
     this.begin(acceptMap(this.view.game, this.generator.random));
   };
   private begin(game: GameState) {
     this.animation = null;
+    this.pendingSession = null;
+    this.historyEnd = null;
     this.update({
       game,
       mode: 'playing',
@@ -239,7 +424,12 @@ export class GameController {
     if (!Number.isInteger(count) || count < 2 || count > 8)
       throw new Error('playerCount must be an integer from 2 through 8.');
     this.update({ count });
-    this.begin(acceptMap(this.generator.preview(count), this.generator.random));
+    this.begin(
+      acceptMap(
+        this.generator.preview(count, this.previewGrid),
+        this.generator.random,
+      ),
+    );
     return {
       status: 'started',
       playerCount: count,
@@ -377,6 +567,7 @@ export class GameController {
     )
       return;
     this.animation = null;
+    this.historyEnd = { mode: s.mode as 'lost' | 'won', game: s.game };
     this.update({
       game: startHistory(s.game),
       mode: 'history',
@@ -412,14 +603,14 @@ export class GameController {
     const s = this.view;
     if (s.mode === 'loading') {
       if (s.loaded === 100) {
-        if (s.frame >= 5) this.title();
+        if (s.frame >= 5) this.resume();
         else this.update({ frame: s.frame + 1 });
       }
       return;
     }
     if (s.mode === 'building') {
       this.update({
-        game: this.generator.preview(s.count),
+        game: this.generator.preview(s.count, this.previewGrid),
         mode: 'preview',
         frame: 3,
         notice: 'Do you play this one?',
@@ -553,6 +744,7 @@ export class GameController {
       phase: s.phase,
       selected: s.selected,
       target: s.target,
+      grid: game?.grid ?? null,
       currentPlayer: game?.turnOrder.length ? currentPlayer(game) : null,
       validSources: sources,
       validAttacks: game

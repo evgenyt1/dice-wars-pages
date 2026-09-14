@@ -1,6 +1,7 @@
 /* SVG groups preserve the original transformed hit regions; SVG has no native button element. */
 /* eslint-disable jsx-a11y/prefer-tag-over-role */
-import { Fragment, type ReactNode, useState } from 'react';
+import { type ReactNode, useState } from 'react';
+import { assetUrl } from './asset-url';
 import data from './flash-art.json';
 
 type Placement = {
@@ -37,7 +38,7 @@ export function Vector({ symbol }: { symbol: string | number }) {
   if (!asset) return null;
   return (
     <use
-      href={`./game-assets/vector/symbols.svg#v${symbol}`}
+      href={`${assetUrl('game-assets/vector/symbols.svg')}#v${symbol}`}
       pointerEvents="none"
     />
   );
@@ -145,7 +146,7 @@ export function FlashButton({
       </g>
       <image
         className="button-hit"
-        href={`./game-assets/vector/b${id}-4_hittest.svg`}
+        href={assetUrl(`game-assets/vector/b${id}-4_hittest.svg`)}
         x={hit.x}
         y={hit.y}
         width={hit.width}
@@ -194,73 +195,5 @@ export function Scene({
         );
       })}
     </>
-  );
-}
-export function TitleArt({
-  count,
-  dice,
-  choose,
-  play,
-  press,
-}: {
-  count: number;
-  dice: { owner: number; face: number }[];
-  choose: (n: number) => void;
-  play: () => void;
-  press?: () => void;
-}) {
-  return (
-    <Transform matrix={[1.0001373, 0, 0, 1.0006561, 0, -20]}>
-      <Scene
-        id={54}
-        render={(p, parent) => {
-          if (p.characterId === 16 || p.characterId === 19)
-            return (
-              <FlashButton
-                id={p.characterId}
-                label={p.characterId === 16 ? 'Play' : 'Top page'}
-                press={press}
-                action={
-                  p.characterId === 16
-                    ? play
-                    : () =>
-                        window.open(
-                          'http://www.gamedesign.jp/',
-                          '_blank',
-                          'noopener,noreferrer',
-                        )
-                }
-              />
-            );
-          if (p.characterId === 43) {
-            const index = Number(p.name?.slice(2));
-            const die = dice[index];
-            return die ? (
-              <Vector symbol={`s43-f${die.owner * 10 + die.face}`} />
-            ) : null;
-          }
-          if (p.characterId === 50 && parent === 52) {
-            const n = Number(p.name?.slice(1)) + 2;
-            return (
-              <Fragment>
-                <FlashButton
-                  id={48}
-                  label={`${n} players`}
-                  selected={count === n}
-                  action={() => choose(n)}
-                />
-                <Transform matrix={[1, 0, 0, 1, 2, 1.5]}>
-                  <Digits
-                    field={49}
-                    value={n}
-                    color={count === n ? '#cc0000' : '#999999'}
-                  />
-                </Transform>
-              </Fragment>
-            );
-          }
-        }}
-      />
-    </Transform>
   );
 }

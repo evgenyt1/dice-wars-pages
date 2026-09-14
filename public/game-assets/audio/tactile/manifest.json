@@ -1,0 +1,56 @@
+{
+  "sample_rate": 24000,
+  "provenance": "Original deterministic modal/pluck synthesis; no source audio used.",
+  "timing": "Retain every existing controller trigger and 24 fps scheduling. Clip lengths are presentation-only, no waits added.",
+  "sounds": {
+    "button": {
+      "duration": 0.14,
+      "peak": 0.47,
+      "rms": 0.07805975099141695,
+      "sha256": "8dc3dfbb653c8bf48905dae4a0e3533c59547fb70a63314d4d7685e35bf97516"
+    },
+    "click": {
+      "duration": 0.06,
+      "peak": 0.42999999999999994,
+      "rms": 0.0889594495038012,
+      "sha256": "ddaec765c131ff6c0bb6383eae855620b1232c9f2a99a63c222de13b69cb86d4"
+    },
+    "dice": {
+      "duration": 0.034,
+      "peak": 0.3499999999999999,
+      "rms": 0.08503106183324403,
+      "sha256": "32673854aaea40f2772118137ee502c7d853c85110b6dbd03f6685112bcfd390"
+    },
+    "my-turn": {
+      "duration": 0.17,
+      "peak": 0.49,
+      "rms": 0.14556037977104963,
+      "sha256": "d3544eb1641e52c20601c857c663ee9d8700c141962b7c32d65e5392e6ae4fbd"
+    },
+    "success": {
+      "duration": 0.224,
+      "peak": 0.48,
+      "rms": 0.1141216622526084,
+      "sha256": "8f6ab30d4ea4daa3208ef73709d0ffa6ebc19de456fb4d0b0699ed1b8d06c056"
+    },
+    "fail": {
+      "duration": 0.3,
+      "peak": 0.42,
+      "rms": 0.10641314514730991,
+      "sha256": "3f5a0ded311e165b24d4d76da2fb5c699c538c1be2c7d88b808ea08dd3817b8c"
+    },
+    "game-over": {
+      "duration": 0.95,
+      "peak": 0.48,
+      "rms": 0.11845132827470667,
+      "sha256": "c0108d427243d73740d8cb62245ecaafbaaaa8e39c97eac52d1fee97779af253"
+    },
+    "victory": {
+      "duration": 1.45,
+      "peak": 0.54,
+      "rms": 0.11219311775247943,
+      "sha256": "13f94e63c8a5d6266b6b2eed72c76dd6134f2a7438edcea389f3bcbb40f9b301"
+    }
+  },
+  "playback_gain": 0.65
+}
