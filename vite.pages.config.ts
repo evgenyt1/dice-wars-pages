@@ -8,6 +8,7 @@ const here = (path: string) => fileURLToPath(new URL(path, import.meta.url));
 
 /** Static client build for GitHub Pages (evgenyt1/dice-wars-pages). */
 export default defineConfig({
+  define: { __BUILD_TIME__: JSON.stringify(new Date().toISOString()) },
   root: here('./gh-pages'),
   base: process.env.PAGES_BASE ?? '/dice-wars-pages/',
   publicDir: here('./public'),

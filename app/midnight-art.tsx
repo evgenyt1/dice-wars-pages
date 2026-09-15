@@ -3,6 +3,7 @@
 import { useLayoutEffect, useRef } from 'react';
 import type { ComponentPropsWithRef } from 'react';
 import { ArrowRight } from 'lucide-react';
+import { BUILD_LABEL } from './build-info';
 import type { TitleDie } from './game-controller';
 import { THEMES } from './game-presentation';
 import { DiceArtwork } from './dice-art';
@@ -220,6 +221,7 @@ export function MidnightTitle({
         </div>
       </div>
       <footer className="title-footer">
+        {BUILD_LABEL && <span className="build-stamp">{BUILD_LABEL}</span>}
         <div className="palette-dots" aria-hidden="true">
           {THEMES[theme].palette.map(({ color }) => (
             <span key={color} style={{ background: color }} />

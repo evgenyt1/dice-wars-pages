@@ -99,8 +99,11 @@ function MapBoard({
       role: enabled && !stack ? 'button' : undefined,
       tabIndex: enabled && !stack ? 0 : undefined,
       'aria-label': !stack ? playerTerritoryLabel(game, id, theme) : undefined,
-      onPointerDown: enabled
-        ? (e: React.PointerEvent<SVGElement>) => {
+      // Click, not pointerdown: iOS can leave Pointer Events undelivered after a
+      // backgrounded home-screen app resumes, while click keeps working (matching
+      // every other control here, which all use onClick and stay responsive).
+      onClick: enabled
+        ? (e: React.MouseEvent<SVGElement>) => {
             if (e.button === 0) input.territory(id);
           }
         : undefined,
